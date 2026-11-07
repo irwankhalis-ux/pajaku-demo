@@ -1,5 +1,5 @@
-# Membangun APK "PaJaKu Demo" otomatis di GitHub setiap ada perubahan (atau tombol "Run workflow").
-# Hasil: cabang `apk` berisi PaJaKu-Demo.apk + build.log.
+# Membangun APK "PaJaKu" otomatis di GitHub setiap ada perubahan (atau tombol "Run workflow").
+# Hasil: cabang `apk` berisi PaJaKu.apk + build.log.
 name: Build APK
 on:
   push:
@@ -19,12 +19,12 @@ jobs:
       - name: Build
         run: |
           set -o pipefail
-          { npm ci && npx cap sync android && cd android && chmod +x gradlew && ./gradlew assembleDebug --no-daemon; } 2>&1 | tee build.log
+          { npm ci && npm run build && npx cap sync android && cd android && chmod +x gradlew && ./gradlew assembleDebug --no-daemon; } 2>&1 | tee build.log
       - name: Simpan APK & log ke cabang apk
         if: always()
         run: |
-          mkdir out && cp build.log out/ 2>/dev/null || true
-          cp android/app/build/outputs/apk/debug/app-debug.apk out/PaJaKu-Demo.apk 2>/dev/null || true
-          cd out && git init -q && git checkout -q -b apk && git add -A
+          mkdir apkout && cp build.log apkout/ 2>/dev/null || true
+          cp android/app/build/outputs/apk/debug/app-debug.apk apkout/PaJaKu.apk 2>/dev/null || true
+          cd apkout && git init -q && git checkout -q -b apk && git add -A
           git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "Build ${GITHUB_SHA::7}"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" apk

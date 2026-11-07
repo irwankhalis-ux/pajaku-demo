@@ -1,24 +1,24 @@
-# PaJaKu Demo — aplikasi Android
+# PaJaKu — Aplikasi Tahap 1A (versi penuh, data contoh)
 
-Membungkus demo "PaJaKu Demo" (Aplikasi Pedagang, Konsol Pasar Jaya, Konsol Mitra Pengembang) menjadi APK Android dengan Capacitor 8. Semua data ilustrasi, jalan tanpa internet. Powered by PATROL · PT Patrol Indonesia Raya.
+Aplikasi Android PasarJayaKu untuk pilot migrasi e-SHPTU & e-SIPTU Pasar Johar Baru. Satu aplikasi untuk pedagang dan staf Pasar Jaya L1–L5. Powered by PATROL · PT Patrol Indonesia Raya.
 
-- Isi aplikasi: `www/index.html` (satu file). Ganti file ini untuk memperbarui demo.
-- App ID: `id.patrol.pajakudemo` · nama: PaJaKu Demo · Android 7.0+ (minSdk 24).
+- **Pedagang**: masuk dengan no. HP + OTP (simulasi `481275`), Beranda kios, Detail TU, Ajukan koreksi, Dompet Dokumen ber-QR, Layanan (tiket & pertanyaan), Akun & kategori. Pendaftaran anggota baru (Blue).
+- **Staf** (PIN uji coba `123456`): L5 Petugas Pendataan (5 langkah + OTP Pemilik), L4 Kepala Pasar (validasi, tiket), L3 Manager Area (anomali, eskalasi), L2 Kadiv (progres wilayah, keputusan eskalasi), L1 Direksi (ringkasan, TTE batch dengan PIN).
+- **Data**: 629 TU contoh, tersimpan di HP (tidak hilang saat aplikasi ditutup). Kontrak backend: `API.md`.
+- Nomor HP contoh: Siti `081234564471` (Emerald), H. Darmawan `081398762290` (Platinum), Budi `085711221180` (Gold), Andi `082133443307` (Blue), Sutrisno `081310026620`.
 
-## Cara 1 — Android Studio (±10 menit)
-1. Pasang Android Studio (sudah termasuk JDK & Android SDK) dan Node.js 22.
-2. Di folder ini: `npm install` lalu `npx cap sync android`.
-3. `npx cap open android` → tunggu Gradle selesai → menu **Build › Build App Bundle(s) / APK(s) › Build APK(s)**.
-4. APK ada di `android/app/build/outputs/apk/debug/app-debug.apk`. Kirim lewat WhatsApp, pasang di HP (izinkan "pasang dari sumber tidak dikenal").
+## Kode
+Next.js 16 (ekspor statis ke `out/`) + Capacitor 8 (Android). `src/lib/model.ts` model & data contoh, `src/lib/store.ts` lapisan data & aksi, `src/app/*` layar.
 
-Tanpa Android Studio, cukup terminal dengan JDK 21 + Android SDK: `npm install && npx cap sync android && cd android && ./gradlew assembleDebug`.
+```bash
+npm install
+npm run dev            # coba di browser: http://localhost:3000
+npm run apk:sync       # build web + salin ke proyek Android
+cd android && ./gradlew assembleDebug   # APK di android/app/build/outputs/apk/debug/
+```
 
-## Cara 2 — GitHub (tanpa instalasi apa pun)
-Unggah folder ini ke repositori GitHub. Workflow `.github/workflows/build-apk.yml` otomatis membangun APK; unduh dari tab **Actions › Build APK › Artifacts › PaJaKu-Demo-apk**.
+## Build otomatis
+Setiap push ke `main`, GitHub Actions membangun APK dan menyimpannya di cabang `apk` (`PaJaKu.apk` + `build.log`).
 
-## Catatan
-- APK debug (bukan untuk Play Store). Untuk Play Store perlu APK/AAB rilis yang ditandatangani dengan keystore PT Patrol Indonesia Raya.
-- Folder `node_modules` tidak disertakan; jalankan `npm install` dulu.
-
-## Link publik (GitHub Pages)
-Folder `docs/` berisi versi web yang sama. Aktifkan sekali di **Settings › Pages › Build and deployment › Source: Deploy from a branch › Branch: main / folder: /docs**, lalu demo bisa dibuka di `https://irwankhalis-ux.github.io/pajaku-demo/` dan dipasang ke layar utama (Android & iPhone).
+## Demo lama
+`docs/index.html` = demo gabungan (Pedagang, Konsol Pasar Jaya, Konsol Mitra) untuk presentasi; bisa dibuka lewat GitHub Pages bila diaktifkan (Settings › Pages › main /docs).

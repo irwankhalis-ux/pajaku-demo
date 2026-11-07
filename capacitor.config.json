@@ -1,5 +1,5 @@
 {
-  "appId": "id.patrol.pajakudemo",
-  "appName": "PaJaKu Demo",
-  "webDir": "www"
+  "appId": "id.patrol.pajaku",
+  "appName": "PaJaKu",
+  "webDir": "out"
 }
