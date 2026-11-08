@@ -1,11 +1,19 @@
-# PaJaKu — Aplikasi Tahap 1A (versi penuh, data contoh)
+# PaJaKu — TokoPaja (pedagang) & Konsol Pasar Jaya
 
-Aplikasi Android PasarJayaKu untuk pilot migrasi e-SHPTU & e-SIPTU Pasar Johar Baru. Satu aplikasi untuk pedagang dan staf Pasar Jaya L1–L5. Powered by PATROL · PT Patrol Indonesia Raya.
+Satu kode, dua aplikasi Android untuk pilot migrasi e-SHPTU & e-SIPTU Pasar Johar Baru (629 TU, data contoh). Powered by PATROL · PT Patrol Indonesia Raya.
 
-- **Pedagang**: masuk dengan no. HP + OTP (simulasi `481275`), Beranda kios, Detail TU, Ajukan koreksi, Dompet Dokumen ber-QR, Layanan (tiket & pertanyaan), Akun & kategori. Pendaftaran anggota baru (Blue).
-- **Staf** (PIN uji coba `123456`): L5 Petugas Pendataan (5 langkah + OTP Pemilik), L4 Kepala Pasar (validasi, tiket), L3 Manager Area (anomali, eskalasi), L2 Kadiv (progres wilayah, keputusan eskalasi), L1 Direksi (ringkasan, TTE batch dengan PIN).
-- **Data**: 629 TU contoh, tersimpan di HP (tidak hilang saat aplikasi ditutup). Kontrak backend: `API.md`.
-- Nomor HP contoh: Siti `081234564471` (Emerald), H. Darmawan `081398762290` (Platinum), Budi `085711221180` (Gold), Andi `082133443307` (Blue), Sutrisno `081310026620`.
+**PaJaKu.apk — TokoPaja (aplikasi pedagang)**
+- Registrasi: data diri → OTP (simulasi `481275`) → foto KTP & swafoto → pilih jalur (pemilik SHPTU kertas / Pengelola-penyewa / calon pedagang).
+- Migrasi digital SHPTU mandiri: pilih kios → identitas → foto SHPTU/SIPTU kertas & kwitansi → pindai QR + GPS kios → kirim dengan PIN (`123456`) → lacak sampai e-SHPTU & e-SIPTU terbit.
+- Registrasi Pengelola + persetujuan Pemilik dengan PIN; perpanjangan e-SIPTU kilat; Dompet Dokumen ber-QR; Keuangan (BPP/HPTU, bayar QRIS/VA, poin); Info harga; Kredit & program; Layanan (pertanyaan, pengaduan, darurat); Pesan.
+- Buka Toko digital (TokoPaja): aktivasi dari e-SIPTU → e-Katalog (harga tetap/rentang, grosir, stok) → pesanan pembeli (konfirmasi harga → QRIS → kirim → selesai) → pelanggan → kulakan B2B (Food Station, pasar induk, koperasi; tempo SCF).
+- HP contoh: Siti `081234564471` (Emerald), H. Darmawan `081398762290` (Platinum, ada persetujuan Pengelola), Budi `085711221180` (Gold, toko aktif), Andi `082133443307` (Blue), Sutrisno `081310026620` (SHPTU kertas), Rudi `081377120044` (calon Pengelola).
+
+**Konsol-PasarJaya.apk — back office, EIS Direksi, CRM** (PIN `123456`)
+- EIS Direksi, Migrasi & TTE (pengajuan dari aplikasi, corong, anomali), CRM Tenant 360 (profil, tiket, pengumuman, aktivasi), Tagihan BPP & HPTU, Operasi & harga harian, monitoring TokoPaja, Dokumen, Audit.
+- HP per jenjang: Direksi (TTE batch), Kadiv, Manager Area, Kepala Pasar, Tim CRM, Petugas Pendataan, Kasir.
+
+Data tersimpan di HP masing-masing (tanpa server). Di aplikasi pedagang ada tombol "Simulasikan proses kantor & TTE" agar alur bisa didemokan di satu HP. Kontrak backend: `API.md`.
 
 ## Kode
 Next.js 16 (ekspor statis ke `out/`) + Capacitor 8 (Android). `src/lib/model.ts` model & data contoh, `src/lib/store.ts` lapisan data & aksi, `src/app/*` layar.
@@ -18,7 +26,7 @@ cd android && ./gradlew assembleDebug   # APK di android/app/build/outputs/apk/d
 ```
 
 ## Build otomatis
-Setiap push ke `main`, GitHub Actions membangun APK dan menyimpannya di cabang `apk` (`PaJaKu.apk` + `build.log`).
+Setiap push ke `main`, GitHub Actions membangun kedua APK dan menyimpannya di cabang `apk` (`PaJaKu.apk`, `Konsol-PasarJaya.apk`, `build.log`). Build lokal Konsol: `NEXT_PUBLIC_APP=konsol npm run build`, lalu `cap sync` dengan `capacitor.konsol.json` (proyek `android-konsol/`).
 
 ## Demo lama
 `docs/index.html` = demo gabungan (Pedagang, Konsol Pasar Jaya, Konsol Mitra) untuk presentasi; bisa dibuka lewat GitHub Pages bila diaktifkan (Settings › Pages › main /docs).

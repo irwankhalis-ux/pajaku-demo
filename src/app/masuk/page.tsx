@@ -6,7 +6,7 @@ import { useState } from "react";
 import { cariHp, masukPedagang } from "@/lib/store";
 import { OTP_DEMO } from "@/lib/model";
 
-const CONTOH = [["081234564471", "Siti · Emerald"], ["081398762290", "H. Darmawan · Platinum"], ["085711221180", "Budi · Gold"], ["082133443307", "Andi · Blue"]];
+const CONTOH = [["081234564471", "Siti · Emerald"], ["081398762290", "H. Darmawan · Platinum"], ["085711221180", "Budi · Gold (punya toko)"], ["082133443307", "Andi · Blue"], ["081310026620", "Sutrisno · SHPTU kertas"], ["081377120044", "Rudi · calon Pengelola"]];
 const samar = (hp: string) => hp.slice(0, 4) + "••••" + hp.slice(-4);
 
 export default function Masuk() {
@@ -30,11 +30,12 @@ export default function Masuk() {
 
   return (
     <div className="flex min-h-dvh flex-col gap-[18px] bg-pj px-6 pt-[calc(28px+env(safe-area-inset-top))] pb-6 text-white">
-      <div className="flex items-center justify-between"><span className="text-[13px] text-pj-soft">PasarJayaKu · Powered by PATROL</span><Link href="/" className="text-[13px] font-semibold text-pj-soft">Batal</Link></div>
-      <h1 className="text-2xl leading-tight font-bold">{tahap === "hp" ? "Masuk ke PaJaKu" : "Masukkan kode OTP"}</h1>
+      <div className="flex items-center justify-between"><span className="text-[13px] text-pj-soft">TokoPaja · PaJaKu</span><Link href="/" className="text-[13px] font-semibold text-pj-soft">Batal</Link></div>
+      <h1 className="text-2xl leading-tight font-bold">{tahap === "hp" ? "Masuk ke TokoPaja" : "Masukkan kode OTP"}</h1>
       <p className="text-[14.5px] leading-relaxed text-[#E1EEE7]">
-        {tahap === "hp" ? "Gunakan nomor HP yang dicatat petugas saat pendataan ulang tempat usaha Anda." : `Kode 6 angka dikirim lewat SMS ke ${samar(hp.replace(/\D/g, ""))}.`}
+        {tahap === "hp" ? "Gunakan nomor HP yang dicatat petugas saat pendataan, atau yang Anda daftarkan sendiri." : `Kode 6 angka dikirim lewat SMS ke ${samar(hp.replace(/\D/g, ""))}.`}
       </p>
+      {tahap === "hp" && <Link href="/daftar/" className="text-[13.5px] font-semibold text-gold underline">Belum punya akun? Daftar</Link>}
       {tahap === "hp" ? (
         <form onSubmit={kirimOtp} className="mt-auto flex flex-col gap-3 rounded-[14px] bg-white p-[18px] text-ink">
           <label htmlFor="hp" className="text-sm font-semibold">Nomor HP</label>

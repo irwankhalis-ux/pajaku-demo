@@ -45,6 +45,8 @@ function Dompet() {
               })}
               {cur && (
                 <section className="flex flex-col items-center gap-2.5 rounded-[14px] border-2 border-pj bg-white p-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/pasarjaya-logo.png" alt="Perumda Pasar Jaya" width={540} height={330} className="h-10 w-auto" />
                   <div className="text-xs font-bold tracking-[.06em] text-muted">{cur.jenis} · {cur.tuId}</div>
                   <DocQR no={cur.no} />
                   <div className="font-mono text-[13.5px] font-medium">{cur.no}</div>

@@ -6,7 +6,7 @@ import { masukStaf, peranHome } from "@/lib/store";
 import { STAF, PIN_DEMO } from "@/lib/model";
 import { BackHeader } from "@/components/ui";
 
-const LV: Record<string, string> = { direksi: "L1", kadiv: "L2", manager: "L3", kepala: "L4", petugas: "L5" };
+const LV: Record<string, string> = { direksi: "L1", kadiv: "L2", manager: "L3", kepala: "L4", crm: "L4", petugas: "L5", kasir: "L5" };
 
 export default function Staf() {
   const router = useRouter();
@@ -15,7 +15,7 @@ export default function Staf() {
   const [err, setErr] = useState("");
   return (
     <div className="flex min-h-dvh flex-col">
-      <BackHeader href="/" title="Masuk staf Pasar Jaya" sub="Akun jenjang L1–L5" />
+      <BackHeader href="/" title="Masuk staf Pasar Jaya" sub="Akun jenjang L1–L5 · Konsol Pasar Jaya" />
       <form
         onSubmit={(e) => { e.preventDefault(); const m = masukStaf(id, pin); if (m) return setErr(m); router.replace(peranHome[STAF.find((x) => x.id === id)!.peran]); }}
         className="flex flex-1 flex-col gap-3 px-4 pb-6"

@@ -4,7 +4,9 @@ import { useRouter } from "next/navigation";
 import { PedagangPage } from "@/components/pedagang";
 import { card } from "@/components/ui";
 import { KATEGORI, type Kategori } from "@/lib/model";
-import { keluar, pedagangById } from "@/lib/store";
+import { aturUlang, keluar, pedagangById } from "@/lib/store";
+
+const confirmReset = () => typeof window !== "undefined" && window.confirm("Hapus semua perubahan dan kembali ke data contoh awal?");
 
 export default function Akun() {
   const router = useRouter();
@@ -41,9 +43,13 @@ export default function Akun() {
                   {pemilikLain.map((t) => <p key={t.id} className="text-[13px] text-ink-2"><b>{t.id}</b> · Anda Pengelola atas persetujuan Pemilik {pedagangById(s, t.pemilikId)?.nama}.</p>)}
                 </section>
               )}
+              <section className={`${card} px-3.5 py-1`}>
+                {[["/pengajuan/", "Pengajuan saya"], ["/keuangan/", "Keuangan & poin"], ["/toko/", "TokoPaja"], ["/pesan/", "Pesan & notifikasi"]].map(([h, l], i) => <a key={h} href={h} className={`flex justify-between py-3 text-sm font-semibold ${i < 3 ? "border-b border-[#EFF0EA]" : ""}`}>{l}<span className="text-muted">›</span></a>)}
+              </section>
               <div className="rounded-xl bg-mint px-3.5 py-3 text-[12.5px] leading-relaxed text-mint-ink">Data Anda dikelola Perumda Pasar Jaya dan hanya dibagikan ke pihak lain (mis. bank) atas permintaan Anda.</div>
               <button onClick={() => { keluar(); router.replace("/"); }} className="min-h-[46px] rounded-lg border border-line-2 bg-white text-sm font-semibold text-[#7A2E24]">Keluar</button>
-              <div className="text-center text-[11.5px] text-[#6B7670]">PaJaKu 0.2 · Powered by Patrol Indonesia Raya</div>
+              <button onClick={() => { if (confirmReset()) { aturUlang(); router.replace("/"); } }} className="text-[12.5px] font-semibold text-muted underline">Atur ulang data contoh di HP ini</button>
+              <div className="text-center text-[11.5px] text-[#6B7670]">TokoPaja · PaJaKu 1.0 · Powered by Patrol Indonesia Raya</div>
             </main>
           </>
         );

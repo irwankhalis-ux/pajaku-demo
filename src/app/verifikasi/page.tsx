@@ -14,6 +14,8 @@ function Portal() {
   return (
     <div className="flex min-h-dvh flex-col">
       <header className="bg-pj px-[18px] pt-[calc(20px+env(safe-area-inset-top))] pb-[18px] text-white">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/pasarjaya-logo.png" alt="Perumda Pasar Jaya" width={540} height={330} className="mb-1.5 h-9 w-auto rounded-md bg-white px-2 py-1" />
         <div className="text-xs text-pj-soft">Portal verifikasi · Perumda Pasar Jaya</div>
         <h1 className="text-lg font-bold">Cek keaslian dokumen</h1>
       </header>

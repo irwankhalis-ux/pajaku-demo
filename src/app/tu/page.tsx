@@ -46,6 +46,12 @@ function Detail() {
                   {riwayat.map((l, i) => <div key={i} className="py-1 text-[13px]"><b>{l.t}</b> · {l.apa}</div>)}
                 </section>
               )}
+              <div className="grid grid-cols-2 gap-2">
+                {d.pakai && d.si?.status === "terbit" && <Link href={`/perpanjang/?tu=${t.id}`} className="rounded-[10px] bg-mint p-3 text-center text-[13px] font-semibold text-mint-ink">Perpanjang e-SIPTU</Link>}
+                {d.pakai && d.si?.status === "terbit" && <Link href={s.toko.some((x) => x.tuId === t.id) ? "/toko/" : `/toko/aktivasi/?tu=${t.id}`} className="rounded-[10px] bg-mint p-3 text-center text-[13px] font-semibold text-mint-ink">{s.toko.some((x) => x.tuId === t.id) ? "Buka TokoPaja" : "Buka toko online"}</Link>}
+                {d.milik && (t.status === "arsip" || t.status === "dikembalikan") && <Link href={`/migrasi/?tu=${t.id}`} className="col-span-2 rounded-[10px] bg-pj p-3 text-center text-[13px] font-semibold text-white">Migrasi digital SHPTU</Link>}
+                {d.milik && !t.buka && <Link href="/registrasi-pengelola/" className="col-span-2 rounded-[10px] bg-mint p-3 text-center text-[13px] font-semibold text-mint-ink">Kios kosong · calon Pengelola daftar dari aplikasinya</Link>}
+              </div>
               <Link href={`/koreksi/?id=${t.id}`} className="block rounded-[10px] border-[1.5px] border-pj bg-white p-3.5 text-center text-sm font-semibold text-pj">Data tidak sesuai? Ajukan koreksi</Link>
             </main>
           </>
