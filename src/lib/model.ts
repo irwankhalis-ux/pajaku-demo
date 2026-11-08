@@ -52,7 +52,7 @@ export type Pesanan = {
 };
 export type Kulakan = {
   id: string; tokoId: string; pemasok: string; items: { nama: string; qty: number; sat: string; harga: number }[];
-  bayar: "tunai" | "tempo"; status: "dipesan" | "dikirim" | "diterima"; tgl: string;
+  bayar: "tunai" | "tempo" | "qris" | "do30" | "do60" | "do90"; status: "dipesan" | "dikonfirmasi" | "dikirim" | "diterima"; tgl: string;
 };
 // ---------- keuangan, pengajuan, CRM ----------
 export type Tagihan = {
@@ -104,13 +104,13 @@ export const KOMODITAS: Record<string, [string, string, number, number][]> = {
 };
 
 export const PEMASOK = [
-  { id: "FS", nama: "Food Station Tjipinang Jaya", ket: "BUMD pangan DKI · antar H+1 · bisa bayar tempo 14 hari", items: [["Beras Medium", "karung 25 kg", 318000], ["Beras Premium", "karung 25 kg", 372000], ["Gula Pasir", "karung 50 kg", 845000], ["Minyak Goreng", "dus 12 L", 186000]] as [string, string, number][] },
+  { id: "FS", nama: "Food Station Tjipinang Jaya", ket: "BUMD pangan DKI · antar H+1 · bayar saat terima", items: [["Beras Medium", "karung 25 kg", 318000], ["Beras Premium", "karung 25 kg", 372000], ["Gula Pasir", "karung 50 kg", 845000], ["Minyak Goreng", "dus 12 L", 186000]] as [string, string, number][] },
   { id: "KJ", nama: "Mitra Sayur Pasar Induk Kramat Jati", ket: "Antar subuh · minimal Rp500.000", items: [["Cabai Merah Keriting", "kg", 39000], ["Bawang Merah", "kg", 35000], ["Tomat", "kg", 8500], ["Kentang", "kg", 14000]] as [string, string, number][] },
   { id: "KOP", nama: "Koperasi Pedagang Johar Baru", ket: "Ambil di kantor pasar · anggota dapat SHU", items: [["Kopi Sachet", "renceng", 10500], ["Sabun Cuci", "lusin", 42000], ["Air Mineral", "dus", 35000]] as [string, string, number][] },
 ];
 
 export const PROGRAM = [
-  { id: "KMK", judul: "Kredit modal kerja Bank DKI", ket: "Agunan e-SHPTU · s.d. Rp50 juta · bunga KUR", untuk: ["E", "P"] },
+  { id: "KMK", judul: "Kredit modal kerja Bank Jakarta", ket: "Agunan e-SHPTU · s.d. Rp50 juta · bunga KUR", untuk: ["E", "P"] },
   { id: "KUR", judul: "KUR Mikro tanpa agunan", ket: "e-SIPTU sebagai bukti usaha · s.d. Rp10 juta", untuk: ["E", "G"] },
   { id: "LAT", judul: "Pelatihan & sarana Pemprov DKI", ket: "Timbangan digital, etalase, literasi QRIS", untuk: ["E", "P", "G", "B"] },
   { id: "JKS", judul: "Sewa TU kosong lewat JaKios", ket: "Pilih kios kosong di 156 pasar Pasar Jaya", untuk: ["B", "G"] },

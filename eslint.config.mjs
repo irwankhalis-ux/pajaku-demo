@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     "android/**",
     "android-konsol/**",
     "android-mitra/**",
+    "android-kulakan/**",
   ]),
 ]);
 

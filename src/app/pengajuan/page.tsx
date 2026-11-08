@@ -12,7 +12,7 @@ const ALUR: Record<Pengajuan["jenis"], [string, string, number][]> = {
   migrasi: [["Data & foto dikirim dari aplikasi", "Menggantikan antre di loket", 2], ["Verifikasi Kepala Pasar", "Cek SHPTU kertas, NIK & kesesuaian kios", 3], ["Tanda tangan elektronik Direksi", "TTE tersertifikasi", 4], ["e-SHPTU & e-SIPTU terbit", "Masuk Dompet Dokumen", 4]],
   pengelola: [["Pengajuan terkirim", "", 1], ["Persetujuan Pemilik (PIN)", "Lewat aplikasi Pemilik · batas 3×24 jam", 2], ["Verifikasi Kepala Pasar", "Cek NIK & kesesuaian penghuni kios", 3], ["e-SIPTU dialihkan ke nama Anda", "Aktif sebagai Pengelola · Gold · BPP ditagihkan ke Anda", 4]],
   perpanjangan: [["Syarat dicek otomatis", "BPP lancar · NIK terverifikasi", 3], ["Tanda tangan elektronik Direksi", "", 4], ["e-SIPTU baru berlaku s.d. 31 Des 2027", "", 4]],
-  program: [["Minat terkirim", "", 1], ["Dihubungi mitra lewat aplikasi", "Bank DKI / Dinas PPKUKM", 2]],
+  program: [["Minat terkirim", "", 1], ["Dihubungi mitra lewat aplikasi", "Bank Jakarta / Dinas PPKUKM", 2]],
 };
 
 export default function Page() {

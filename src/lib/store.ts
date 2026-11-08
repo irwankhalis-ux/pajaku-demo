@@ -6,7 +6,7 @@ import { useSyncExternalStore } from "react";
 import {
   seed, sekarang, STAF, PIN_DEMO, OTP_DEMO, VERSI, PEMASOK, PROGRAM,
   type State, type Kategori, type Lapangan, type Dokumen, type TU, type Peran, type Pedagang, type Tiket,
-  type Produk, type Pesanan, type Pengajuan, type Notif,
+  type Produk, type Pesanan, type Pengajuan, type Notif, type Kulakan,
 } from "./model";
 
 const KEY = "pajaku-v2";
@@ -436,7 +436,16 @@ export function pesanKulakan(tokoId: string, pemasokId: string, qty: Record<stri
   update((s) => ({ ...s, seq: s.seq + 1, kulakan: [{ id: `KL-2611-${String(40 + s.seq).padStart(4, "0")}`, tokoId, pemasok: pm.nama, items, bayar, status: "dipesan", tgl: sekarang() }, ...s.kulakan] }));
   return null;
 }
-export const majukanKulakan = (id: string) => update((s) => ({ ...s, kulakan: s.kulakan.map((k) => (k.id === id ? { ...k, status: k.status === "dipesan" ? "dikirim" : "diterima" } : k)) }));
+export const majukanKulakan = (id: string) => update((s) => ({ ...s, kulakan: s.kulakan.map((k) => (k.id === id ? { ...k, status: k.status === "dipesan" ? "dikonfirmasi" : k.status === "dikonfirmasi" ? "dikirim" : "diterima" } : k)) }));
+/** Kulakan ke Pasar Jaya Perkulakan (KulakanPatrol): katalog & harga bertingkat yang sama; DO Bank Jakarta khusus Emerald. */
+export function pesanKulakanPJ(tokoId: string, items: { nama: string; qty: number; sat: string; harga: number }[], bayar: Kulakan["bayar"]): string | null {
+  if (!items.length) return "Pilih minimal satu barang.";
+  const s0 = load();
+  const tk = s0.toko.find((t) => t.id === tokoId)!;
+  if (bayar.startsWith("do") && kategoriOf(s0, tk.pedagangId) !== "E") return "Pembiayaan DO Bank Jakarta khusus pedagang Emerald.";
+  update((s) => ({ ...s, seq: s.seq + 1, kulakan: [{ id: `KP-2611-${String(700 + s.seq).padStart(5, "0")}`, tokoId, pemasok: "Pasar Jaya · Perkulakan dan Ritel (KulakanPatrol)", items, bayar, status: "dipesan", tgl: sekarang() }, ...s.kulakan], log: log(s, nama(s, tk.pedagangId), `kulakan ke Pasar Jaya Perkulakan (${bayar})`, tk.tuId) }));
+  return null;
+}
 
 // ---------- CRM & operasi (Konsol) ----------
 export function catatInteraksi(pid: string, kanal: string, catatan: string, oleh: string) {

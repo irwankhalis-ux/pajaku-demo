@@ -53,3 +53,7 @@ android-mitra/app/build/
 android-mitra/build/
 android-mitra/.gradle/
 android-mitra/app/src/main/assets/public/
+android-kulakan/app/build/
+android-kulakan/build/
+android-kulakan/.gradle/
+android-kulakan/app/src/main/assets/public/

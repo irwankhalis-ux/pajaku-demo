@@ -53,7 +53,7 @@ export const TAHAP: Record<Jalur, string[]> = {
   biru: ["Prospek", "Kunjungan / presentasi", "Booking fee", "e-SPTU terbit", "Bayar masa konstruksi", "Kredit bank (opsional)", "Serah terima"],
 };
 export const BANK = [
-  { nama: "Bank DKI", rate: 8.5, maxT: 84, dpMin: 20, sla: 10 },
+  { nama: "Bank Jakarta", rate: 8.5, maxT: 84, dpMin: 20, sla: 10 },
   { nama: "BSI", rate: 9.5, maxT: 84, dpMin: 20, sla: 12 },
   { nama: "BRI", rate: 9.0, maxT: 60, dpMin: 20, sla: 14 },
   { nama: "Bank Mandiri", rate: 9.25, maxT: 60, dpMin: 25, sla: 14 },
@@ -161,11 +161,11 @@ export function seed(): MState {
   for (let i = 0; i < 36; i++) tambah({ nama: nama(), kat: "B", tahap: i < 18 ? 0 : i < 30 ? 1 : 2, asal: ASAL[Math.floor(r() * 5)], pic: i % 2 ? "Dini Anggraini" : "Rizky Pratama" });
 
   const kredit: Kredit[] = [
-    ["Fransiska T.", "PRM-D-A-03", "Bank DKI", 364.8, 1, "Kurang NIB & rekening koran 6 bulan", 3],
+    ["Fransiska T.", "PRM-D-A-03", "Bank Jakarta", 364.8, 1, "Kurang NIB & rekening koran 6 bulan", 3],
     ["Ismail R.", "PRM-L2-E-09", "BSI", 89.6, 2, "Analisa — e-SHPTU terverifikasi di portal", 6],
-    ["Sutrisno W.", "PRM-D-B-07", "Bank DKI", 70.4, 5, "Pencairan tahap 1 (30%) ke escrow", 12],
+    ["Sutrisno W.", "PRM-D-B-07", "Bank Jakarta", 70.4, 5, "Pencairan tahap 1 (30%) ke escrow", 12],
     ["PT Medika Jaya", "PRM-D-A-01", "Bank Mandiri", 342, 4, "Akad kredit dijadwalkan · blokir agunan disiapkan", 15],
-    ["Joko Santoso", esptu[2].unit, "Bank DKI", 51.2, 3, "Disetujui · menunggu TTE e-SPTU", 18],
+    ["Joko Santoso", esptu[2].unit, "Bank Jakarta", 51.2, 3, "Disetujui · menunggu TTE e-SPTU", 18],
     ["Rahmat H.", "PRM-L3-A-11", "BRI", 76.8, 2, "Melewati SLA 14 hari — eskalasi ke RM bank", 21],
   ].map(([n, u, b, pl, t, c, a], i) => ({ id: `KR-${pad(233 - i * 4, 4)}`, pelangganId: (pelanggan.find((p) => p.nama === n) ?? tambah({ nama: n as string, kat: "B", tahap: 4 })).id, unit: u as string, bank: b as string, plafon: pl as number, tahap: t as number, catatan: c as string, umur: a as number }));
 
@@ -187,7 +187,7 @@ export function seed(): MState {
     konten: [
       { id: "K1", jenis: "Progres fisik", judul: "Pengecoran kolom lantai 2", t: "1 Nov", kanal: "Instagram · PaJaKu", status: "terbit" },
       { id: "K2", jenis: "Promo", judul: "Bonus November untuk Gold & Biru", t: "3 Nov", kanal: "Instagram · TikTok", status: "draf" },
-      { id: "K3", jenis: "Pembiayaan", judul: "Simulasi KPR kios Bank DKI 8,5%", t: "28 Okt", kanal: "PaJaKu", status: "terbit" },
+      { id: "K3", jenis: "Pembiayaan", judul: "Simulasi KPR kios Bank Jakarta 8,5%", t: "28 Okt", kanal: "PaJaKu", status: "terbit" },
     ],
     termin: [
       { id: "TM-1", ket: "Termin 1 · pondasi selesai (20%)", jumlah: 3000, status: "cair", t: "Sep 2026" },

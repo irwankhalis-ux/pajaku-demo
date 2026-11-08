@@ -15,7 +15,7 @@ function Isi({ s, staf, unitAwal, pAwal }: { s: MState; staf: Staf; unitAwal: st
   const [pid, setPid] = useState(pAwal || u0?.pelangganId || "");
   const [cari, setCari] = useState("");
   const [skema, setSkema] = useState<ESPTU["skema"]>("cicilan");
-  const [bank, setBank] = useState("Bank DKI");
+  const [bank, setBank] = useState("Bank Jakarta");
   const [msg, setMsg] = useState("");
   const [f, setF] = useState<ESPTU["status"] | "semua">("semua");
   const p = plg(s, pid);

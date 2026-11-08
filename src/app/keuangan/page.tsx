@@ -7,7 +7,7 @@ import { PinInput, Pill, Sheet, btn, chip } from "@/components/kit";
 import { bayarTagihan, rp } from "@/lib/store";
 import { PIN_DEMO, type Tagihan } from "@/lib/model";
 
-const METODE = [["QRIS", "Semua bank & e-wallet"], ["VA Bank DKI", "Transfer virtual account"], ["JakOne Pay", "Dompet digital Bank DKI"], ["Debit poin", "Potong 1.000 poin = Rp10.000"]];
+const METODE = [["QRIS", "Semua bank & e-wallet"], ["VA Bank Jakarta", "Transfer virtual account"], ["JakOne Pay", "Dompet digital Bank Jakarta"], ["Debit poin", "Potong 1.000 poin = Rp10.000"]];
 
 export default function Keuangan() {
   const [bayar, setBayar] = useState<Tagihan | null>(null);
