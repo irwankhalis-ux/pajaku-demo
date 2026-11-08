@@ -7,8 +7,9 @@ android {
         applicationId "id.patrol.pajaku.konsol"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        // nomor build GitHub Actions → setiap APK baru bisa memperbarui yang lama
+        versionCode Integer.parseInt(System.getenv("GITHUB_RUN_NUMBER") ?: "1")
+        versionName "1.0." + (System.getenv("GITHUB_RUN_NUMBER") ?: "0")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -16,7 +17,20 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    // Kunci tanda tangan TETAP untuk APK uji coba (bukan kunci rilis Play Store).
+    // Tanpa ini GitHub membuat kunci acak tiap build, sehingga APK baru tidak bisa memperbarui yang lama.
+    signingConfigs {
+        uji {
+            storeFile file("../../signing/pajaku-uji.keystore")
+            storePassword "pajaku-uji"
+            keyAlias "pajaku"
+            keyPassword "pajaku-uji"
+        }
+    }
     buildTypes {
+        debug {
+            signingConfig signingConfigs.uji
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
