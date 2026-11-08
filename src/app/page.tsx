@@ -4,9 +4,14 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useData, peranHome } from "@/lib/store";
-import { IS_KONSOL } from "@/lib/app";
+import { IS_KONSOL, IS_MITRA } from "@/lib/app";
+import { HOME, PROYEK, stafM, useM } from "@/lib/mitra";
 
 export default function Splash() {
+  return IS_MITRA ? <Mitra /> : <Utama />;
+}
+
+function Utama() {
   const s = useData();
   const router = useRouter();
   useEffect(() => {
@@ -72,6 +77,40 @@ function Konsol() {
       <div className="mt-4 border-t border-[#24493A] pt-3.5 text-center">
         <div className="text-[10px] font-semibold tracking-[.12em] text-[#9DB5A8]">POWERED BY</div>
         <div className="mt-[3px] text-[13.5px] font-bold">Patrol Indonesia Raya</div>
+      </div>
+    </div>
+  );
+}
+
+function Mitra() {
+  const s = useM();
+  const router = useRouter();
+  const st = stafM(s.sesi?.stafId);
+  useEffect(() => { if (st) router.replace(HOME[st.peran]); }, [st, router]);
+  return (
+    <div className="flex min-h-dvh flex-col bg-[#12302B] px-6 pt-[calc(28px+env(safe-area-inset-top))] pb-[calc(24px+env(safe-area-inset-bottom))] text-white">
+      <div className="flex justify-end"><span className="rounded-md border border-[#2A514A] px-2 py-[3px] text-[10px] font-semibold tracking-[.1em] text-[#A7C3BC]">DATA CONTOH · ILUSTRASI</span></div>
+      <div className="flex flex-1 flex-col items-center justify-center gap-5 text-center">
+        <div>
+          <div className="text-[38px] font-extrabold tracking-[-.01em]">Mitra<span className="text-[#7FD1C1]">Paja</span></div>
+          <div className="mt-0.5 text-[12px] font-semibold tracking-[.14em] text-[#A7C3BC]">KONSOL MITRA PENGEMBANG REVITALISASI</div>
+        </div>
+        <div className="flex w-[250px] flex-col items-center gap-2 rounded-3xl bg-white px-6 py-4">
+          <span className="text-[10.5px] font-bold tracking-[.12em] text-[#5B6168]">BERMITRA DENGAN</span>
+          <Logo />
+        </div>
+        <div className="text-[14px] leading-relaxed text-[#D3E4DF]"><b className="text-white">{PROYEK.nama}</b><br />{PROYEK.mitra} · {PROYEK.tu} tempat usaha<br />Konstruksi {PROYEK.mulai} – {PROYEK.selesai}</div>
+        <ul className="flex max-w-[310px] flex-col gap-1 text-left text-[13.5px] text-[#D3E4DF]">
+          <li>✓ Penjualan 3 jalur: Eksisting · Gold · Biru</li>
+          <li>✓ Undian zoning, e-SPTU ber-TTE Pasar Jaya</li>
+          <li>✓ Tagihan VA/QRIS, escrow, kredit bank</li>
+          <li>✓ CRM chat PaJaKu & EIS Direksi di HP</li>
+        </ul>
+      </div>
+      <Link href="/m/masuk/" className="block rounded-[10px] bg-white p-[15px] text-center text-[15px] font-bold text-[#12302B]">Masuk tim Mitra / Pasar Jaya</Link>
+      <div className="mt-4 border-t border-[#24524A] pt-3.5 text-center">
+        <div className="text-[10px] font-semibold tracking-[.12em] text-[#A7C3BC]">POWERED BY</div>
+        <div className="mt-[3px] text-[13.5px] font-bold">PATROL · PaJaKu</div>
       </div>
     </div>
   );

@@ -49,3 +49,7 @@ android-konsol/app/build/
 android-konsol/build/
 android-konsol/.gradle/
 android-konsol/app/src/main/assets/public/
+android-mitra/app/build/
+android-mitra/build/
+android-mitra/.gradle/
+android-mitra/app/src/main/assets/public/

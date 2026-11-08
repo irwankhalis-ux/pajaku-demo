@@ -1,7 +1,8 @@
 # Membangun dua APK otomatis di GitHub setiap ada perubahan (atau tombol "Run workflow"):
 #   PaJaKu.apk  — aplikasi pedagang TokoPaja (id.patrol.pajaku)
 #   Konsol-PasarJaya.apk — back office, EIS Direksi, CRM, HP L1–L5 (id.patrol.pajaku.konsol)
-# Hasil: cabang `apk` berisi kedua APK + build.log.
+#   MitraPaja.apk — konsol Mitra Pengembang revitalisasi + EIS Direksi Mitra + pengawas Pasar Jaya (id.patrol.pajaku.mitra)
+# Hasil: cabang `apk` berisi ketiga APK + build.log.
 name: Build APK
 on:
   push:
@@ -32,7 +33,12 @@ jobs:
             NEXT_PUBLIC_APP=konsol npm run build &&
             cp capacitor.konsol.json capacitor.config.json && npx cap sync android && git checkout capacitor.config.json &&
             (cd android-konsol && chmod +x gradlew && ./gradlew assembleDebug --no-daemon) &&
-            cp android-konsol/app/build/outputs/apk/debug/app-debug.apk apkout/Konsol-PasarJaya.apk
+            cp android-konsol/app/build/outputs/apk/debug/app-debug.apk apkout/Konsol-PasarJaya.apk &&
+            echo "=== MitraPaja ===" &&
+            NEXT_PUBLIC_APP=mitra npm run build &&
+            cp capacitor.mitra.json capacitor.config.json && npx cap sync android && git checkout capacitor.config.json &&
+            (cd android-mitra && chmod +x gradlew && ./gradlew assembleDebug --no-daemon) &&
+            cp android-mitra/app/build/outputs/apk/debug/app-debug.apk apkout/MitraPaja.apk
           } 2>&1 | tee build.log
       - name: Simpan APK & log ke cabang apk
         if: always()

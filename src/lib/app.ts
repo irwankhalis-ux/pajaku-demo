@@ -1,3 +1,6 @@
-// Satu kode, dua aplikasi: NEXT_PUBLIC_APP=konsol → APK Konsol Pasar Jaya; selain itu → APK PaJaKu (TokoPaja untuk pedagang).
-export const APP: "pedagang" | "konsol" = process.env.NEXT_PUBLIC_APP === "konsol" ? "konsol" : "pedagang";
+// Satu kode, tiga aplikasi (NEXT_PUBLIC_APP):
+//   pedagang (bawaan) → APK PaJaKu (TokoPaja) · konsol → APK Konsol Pasar Jaya · mitra → APK MitraPaja (Mitra Pengembang)
+const A = process.env.NEXT_PUBLIC_APP;
+export const APP: "pedagang" | "konsol" | "mitra" = A === "konsol" ? "konsol" : A === "mitra" ? "mitra" : "pedagang";
 export const IS_KONSOL = APP === "konsol";
+export const IS_MITRA = APP === "mitra";
