@@ -6,10 +6,10 @@ import "@fontsource/ibm-plex-sans/latin-700.css";
 import "@fontsource/ibm-plex-mono/latin-400.css";
 import "@fontsource/ibm-plex-mono/latin-500.css";
 import "./globals.css";
-import { IS_KONSOL, IS_KULAKAN, IS_MITRA } from "@/lib/app";
+import { IS_CC, IS_KONSOL, IS_KULAKAN, IS_MITRA } from "@/lib/app";
 
 export const metadata: Metadata = {
-  title: IS_KONSOL ? "Konsol Pasar Jaya" : IS_MITRA ? "MitraPaja" : IS_KULAKAN ? "KulakanPaja" : "TokoPaja · PaJaKu",
+  title: IS_CC ? "Command Center Paja" : IS_KONSOL ? "Konsol Pasar Jaya" : IS_MITRA ? "MitraPaja" : IS_KULAKAN ? "KulakanPaja" : "TokoPaja · PaJaKu",
   description: "e-SHPTU, e-SIPTU dan data tempat usaha Anda di Pasar Jaya, dalam satu aplikasi.",
   appleWebApp: { capable: true, title: "PaJaKu", statusBarStyle: "default" },
 };
@@ -21,7 +21,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="id" className="antialiased">
       <body className="font-sans">
         {/* Bingkai: penuh di ponsel; 430px (PaJaKu) / 1024px (Konsol, tablet) di layar lebar */}
-        <div className={`mx-auto flex min-h-dvh w-full ${IS_KONSOL || IS_MITRA || IS_KULAKAN ? "max-w-[1024px]" : "max-w-[430px]"} flex-col bg-paper shadow-xl`}>{children}</div>
+        <div className={`mx-auto flex min-h-dvh w-full ${IS_CC ? "bg-[#0B1620]" : `${IS_KONSOL || IS_MITRA || IS_KULAKAN ? "max-w-[1024px]" : "max-w-[430px]"} bg-paper shadow-xl`} flex-col`}>{children}</div>
       </body>
     </html>
   );

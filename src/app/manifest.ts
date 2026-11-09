@@ -8,6 +8,7 @@ const INFO = {
   pedagang: ["PaJaKu · TokoPaja", "PaJaKu", "TokoPaja: e-SHPTU, e-SIPTU, toko online dan kulakan pedagang Pasar Jaya.", "#0F5A40"],
   konsol: ["Konsol Pasar Jaya", "Konsol PJ", "Back office, EIS Direksi dan CRM Perumda Pasar Jaya.", "#0F2A20"],
   mitra: ["MitraPaja", "MitraPaja", "Konsol Mitra Pengembang revitalisasi bersama Perumda Pasar Jaya.", "#12302B"],
+  cc: ["Command Center Paja", "CC Paja", "Command Center TPID untuk Gubernur DKI dan War Room Direksi Perumda Pasar Jaya.", "#0B1620"],
   kulakan: ["KulakanPaja", "KulakanPaja", "Aplikasi pemasok B2B untuk toko TokoPaja di pasar Pasar Jaya.", "#1E293B"],
 } as const;
 

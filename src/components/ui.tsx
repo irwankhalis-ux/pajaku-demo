@@ -70,7 +70,7 @@ export function StafHeader({ jabatan, judul, children }: { jabatan: string; judu
 }
 
 /** Menu back office Konsol: tugas jenjang + modul kantor. */
-export const BO_MENU: [string, string][] = [["tugas", "Tugas saya"], ["/bo/eis/", "EIS Direksi"], ["/bo/migrasi/", "Migrasi & TTE"], ["/bo/crm/", "CRM"], ["/bo/tagihan/", "Tagihan"], ["/bo/operasi/", "Operasi & Harga"], ["/bo/toko/", "TokoPaja"], ["/bo/perkulakan/", "Perkulakan"], ["/bo/dokumen/", "Dokumen"], ["/bo/audit/", "Audit"]];
+export const BO_MENU: [string, string][] = [["tugas", "Tugas saya"], ["/bo/eis/", "EIS Direksi"], ["/bo/direktorat/", "EIS 5 Direktur"], ["/bo/migrasi/", "Migrasi & TTE"], ["/bo/crm/", "CRM"], ["/bo/tagihan/", "Tagihan"], ["/bo/operasi/", "Operasi & Harga"], ["/bo/tpid/", "Input harga TPID"], ["/bo/toko/", "TokoPaja"], ["/bo/perkulakan/", "Perkulakan"], ["/bo/dokumen/", "Dokumen"], ["/bo/audit/", "Audit"]];
 export function BoMenu() {
   const s = useData();
   const path = usePathname();

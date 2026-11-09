@@ -1,9 +1,10 @@
-# Membangun dua APK otomatis di GitHub setiap ada perubahan (atau tombol "Run workflow"):
+# Membangun lima APK otomatis di GitHub setiap ada perubahan (atau tombol "Run workflow"):
 #   PaJaKu.apk  — aplikasi pedagang TokoPaja (id.patrol.pajaku)
 #   Konsol-PasarJaya.apk — back office, EIS Direksi, CRM, HP L1–L5 (id.patrol.pajaku.konsol)
 #   MitraPaja.apk — konsol Mitra Pengembang revitalisasi + EIS Direksi Mitra + pengawas Pasar Jaya (id.patrol.pajaku.mitra)
 #   KulakanPaja.apk — aplikasi pemasok B2B (Pasar Jaya · Perkulakan dan Ritel) untuk toko TokoPaja (id.patrol.pajaku.kulakan)
-# Hasil: cabang `apk` berisi keempat APK + build.log.
+#   CommandCenterPaja.apk — Command Center TPID Gubernur DKI, War Room & EIS 5 Direktur Pasar Jaya (id.patrol.pajaku.cc)
+# Hasil: cabang `apk` berisi kelima APK + build.log.
 name: Build APK
 on:
   push:
@@ -48,7 +49,12 @@ jobs:
             NEXT_PUBLIC_APP=kulakan npm run build &&
             cp capacitor.kulakan.json capacitor.config.json && npx cap sync android && git checkout capacitor.config.json &&
             (cd android-kulakan && chmod +x gradlew && ./gradlew assembleDebug --no-daemon) &&
-            cp android-kulakan/app/build/outputs/apk/debug/app-debug.apk apkout/KulakanPaja.apk
+            cp android-kulakan/app/build/outputs/apk/debug/app-debug.apk apkout/KulakanPaja.apk &&
+            echo "=== Command Center Paja ===" &&
+            NEXT_PUBLIC_APP=cc npm run build &&
+            cp capacitor.cc.json capacitor.config.json && npx cap sync android && git checkout capacitor.config.json &&
+            (cd android-cc && chmod +x gradlew && ./gradlew assembleDebug --no-daemon) &&
+            cp android-cc/app/build/outputs/apk/debug/app-debug.apk apkout/CommandCenterPaja.apk
           } 2>&1 | tee build.log
       - name: Simpan APK & log ke cabang apk
         if: always()

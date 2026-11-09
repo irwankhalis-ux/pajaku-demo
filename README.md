@@ -1,4 +1,4 @@
-# PaJaKu — TokoPaja, Konsol Pasar Jaya, MitraPaja & KulakanPaja
+# PaJaKu — TokoPaja, Konsol Pasar Jaya, MitraPaja, KulakanPaja & Command Center Paja
 
 Satu kode, empat aplikasi Android untuk pilot migrasi e-SHPTU & e-SIPTU Pasar Johar Baru (629 TU, data contoh). Powered by PATROL · PT Patrol Indonesia Raya.
 
@@ -22,6 +22,12 @@ Satu kode, empat aplikasi Android untuk pilot migrasi e-SHPTU & e-SIPTU Pasar Jo
 - Pesanan dari toko TokoPaja (persona & ID kios sama dengan PaJaKu), katalog & harga bertingkat (sama dengan menu Kulakan di TokoPaja), pembiayaan DO Bank Jakarta 30/60/90 hari khusus Emerald, CRM & broadcast (setuju Sales Manager), gudang & delivery dengan QR serah terima, collection tempo, finance DO, penugasan Gubernur/TPID, organisasi & dasar hukum Perda 7/2018, konsol PATROL multi-pemasok.
 - Sinkron: menu Kulakan di TokoPaja memakai katalog `src/lib/kulakan.ts`; Konsol Pasar Jaya punya menu Perkulakan (ringkasan direktorat, TPID, harga kulakan vs eceran harian).
 
+**CommandCenterPaja.apk — Command Center TPID & War Room Direksi** (PIN `246810`)
+- Peran: Gubernur DKI (HP + video wall Command Center DKI), 5 Direktur Pasar Jaya sesuai SK Direksi 172/2022 (EIS HP: Ringkas, Keputusan, Peringatan; Dirut bisa membuka EIS direktorat lain), Operator ruang Command Center.
+- Video wall 1920×1080 diskalakan otomatis (TV, tablet, HP diputar), 4 layar + putar otomatis 20 detik: Command Center TPID DKI (5 kota, 156 pasar, keputusan Gubernur), War Room 1 (okupansi, BPP, CRM), War Room 2 (harga 14 komoditas TPID dari input juru tagih/AO, validasi anomali, ingatkan AO), War Room 3 (kios tutup, penegakan BPP Perda 7/2018 Pasal 20, revitalisasi).
+- Sinkron: persetujuan Gubernur atas operasi pasar/KAD otomatis menjadi penugasan Direktur Perkulakan; rekomendasi War Room 3 memakai keputusan yang sama dengan EIS Direktur. Data di `src/lib/direksi.ts`, keputusan di `src/lib/cc.ts`.
+- Konsol Pasar Jaya: menu **EIS 5 Direktur** dan **Input harga TPID** (juru tagih/AO, 14 komoditas × 3 responden, tanda >25% dari median; harga valid ikut memperbarui harga harian di TokoPaja).
+
 Data tersimpan di HP masing-masing (tanpa server). Di aplikasi pedagang ada tombol "Simulasikan proses kantor & TTE" agar alur bisa didemokan di satu HP. Kontrak backend: `API.md`.
 
 ## Kode
@@ -35,7 +41,7 @@ cd android && ./gradlew assembleDebug   # APK di android/app/build/outputs/apk/d
 ```
 
 ## Build otomatis
-Setiap push ke `main`, GitHub Actions membangun kedua APK dan menyimpannya di cabang `apk` (`PaJaKu.apk`, `Konsol-PasarJaya.apk`, `MitraPaja.apk`, `KulakanPaja.apk`, `build.log`). Build lokal Konsol: `NEXT_PUBLIC_APP=konsol npm run build`, lalu `cap sync` dengan `capacitor.konsol.json` (proyek `android-konsol/`); MitraPaja: `NEXT_PUBLIC_APP=mitra`, `capacitor.mitra.json`, `android-mitra/`; KulakanPaja: `NEXT_PUBLIC_APP=kulakan`, `capacitor.kulakan.json`, `android-kulakan/`.
+Setiap push ke `main`, GitHub Actions membangun kelima APK dan menyimpannya di cabang `apk` (`PaJaKu.apk`, `Konsol-PasarJaya.apk`, `MitraPaja.apk`, `KulakanPaja.apk`, `CommandCenterPaja.apk`, `build.log`). Build lokal Konsol: `NEXT_PUBLIC_APP=konsol npm run build`, lalu `cap sync` dengan `capacitor.konsol.json` (proyek `android-konsol/`); MitraPaja: `NEXT_PUBLIC_APP=mitra`, `capacitor.mitra.json`, `android-mitra/`; KulakanPaja: `NEXT_PUBLIC_APP=kulakan`, `capacitor.kulakan.json`, `android-kulakan/`; Command Center Paja: `NEXT_PUBLIC_APP=cc`, `capacitor.cc.json`, `android-cc/`.
 
 ## Demo lama
 `docs/index.html` = demo gabungan (Pedagang, Konsol Pasar Jaya, Konsol Mitra) untuk presentasi; bisa dibuka lewat GitHub Pages bila diaktifkan (Settings › Pages › main /docs).

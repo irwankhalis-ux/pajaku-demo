@@ -6,7 +6,7 @@ import { useSyncExternalStore } from "react";
 import {
   seed, sekarang, STAF, PIN_DEMO, OTP_DEMO, VERSI, PEMASOK, PROGRAM,
   type State, type Kategori, type Lapangan, type Dokumen, type TU, type Peran, type Pedagang, type Tiket,
-  type Produk, type Pesanan, type Pengajuan, type Notif, type Kulakan,
+  type Produk, type Pesanan, type Pengajuan, type Notif, type Kulakan, type EntriTPID,
 } from "./model";
 
 const KEY = "pajaku-v2";
@@ -474,3 +474,18 @@ export function ubahHarga(komoditas: string, harga: number, oleh: string) {
   update((s) => ({ ...s, harga: s.harga.map((h) => (h.komoditas === komoditas ? { ...h, kemarin: h.hariIni === harga ? h.kemarin : h.hariIni, hariIni: harga, t: sekarang() } : h)), log: log(s, oleh, `harga ${komoditas} ${rp(harga)}`) }));
 }
 export const pemasokById = (id: string) => PEMASOK.find((p) => p.id === id);
+
+// ---------- input harga TPID (juru tagih/AO) ----------
+/** Nama komoditas TPID → nama di harga harian pasar (tampil di TokoPaja & Operasi Konsol). */
+export const PETA_HARGA: Record<string, string> = { "Beras medium": "Beras Medium", "Beras premium": "Beras Premium", "Gula pasir": "Gula Pasir", "Minyakita (l)": "Minyak Goreng", "Telur ayam": "Telur Ayam Ras", "Cabai merah": "Cabai Merah Keriting", "Bawang merah": "Bawang Merah", "Daging ayam": "Ayam Potong" };
+export function kirimHargaTPID(pasar: string, baris: EntriTPID["baris"], oleh: string): string {
+  const id = `TPID-${Date.now().toString(36).toUpperCase()}`;
+  update((s) => {
+    const peta = new Map(baris.filter((b) => !b.tanda && PETA_HARGA[b.komoditas]).map((b) => [PETA_HARGA[b.komoditas], b.median]));
+    const harga = s.harga.map((h) => { const v = peta.get(h.komoditas); return v && v !== h.hariIni ? { ...h, kemarin: h.hariIni, hariIni: v, t: sekarang() } : h; });
+    const e: EntriTPID = { id, pasar, tgl: new Date().toLocaleDateString("id-ID", { day: "numeric", month: "short", year: "numeric" }), t: sekarang(), oleh, baris };
+    const ditandai = baris.filter((b) => b.tanda).length;
+    return { ...s, harga, tpid: [e, ...(s.tpid ?? [])].slice(0, 60), log: log(s, oleh, `input harga TPID ${pasar}: ${baris.length} komoditas${ditandai ? `, ${ditandai} ditandai validasi` : ""}`) };
+  });
+  return id;
+}

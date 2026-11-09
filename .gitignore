@@ -57,3 +57,7 @@ android-kulakan/app/build/
 android-kulakan/build/
 android-kulakan/.gradle/
 android-kulakan/app/src/main/assets/public/
+android-cc/app/build/
+android-cc/build/
+android-cc/.gradle/
+android-cc/app/src/main/assets/public/

@@ -4,12 +4,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useData, peranHome } from "@/lib/store";
-import { IS_KONSOL, IS_KULAKAN, IS_MITRA } from "@/lib/app";
+import { IS_CC, IS_KONSOL, IS_KULAKAN, IS_MITRA } from "@/lib/app";
+import { HOME_CC, stafCC, useCC } from "@/lib/cc";
 import { HOME as KHOME, PEMASOK, stafK, useK } from "@/lib/kulakan";
 import { HOME, PROYEK, stafM, useM } from "@/lib/mitra";
 
 export default function Splash() {
-  return IS_MITRA ? <Mitra /> : IS_KULAKAN ? <Kulakan /> : <Utama />;
+  return IS_CC ? <CommandCenter /> : IS_MITRA ? <Mitra /> : IS_KULAKAN ? <Kulakan /> : <Utama />;
 }
 
 function Utama() {
@@ -144,6 +145,33 @@ function Kulakan() {
       </div>
       <Link href="/kp/masuk/" className="block rounded-[10px] bg-[#C2410C] p-[15px] text-center text-[15px] font-bold text-white">Masuk tim pemasok</Link>
       <div className="mt-4 border-t border-[#334155] pt-3.5 text-center"><div className="text-[10px] font-semibold tracking-[.12em] text-[#CBD5E1]">POWERED BY</div><div className="mt-[3px] text-[13.5px] font-bold">PATROL · PaJaKu</div></div>
+    </div>
+  );
+}
+
+function CommandCenter() {
+  const s = useCC();
+  const router = useRouter();
+  const st = stafCC(s.sesi?.stafId);
+  useEffect(() => { if (st) router.replace(HOME_CC[st.peran]); }, [st, router]);
+  return (
+    <div className="flex min-h-dvh flex-col bg-[#0B1620] px-6 pt-[calc(28px+env(safe-area-inset-top))] pb-[calc(24px+env(safe-area-inset-bottom))] text-[#E6EDF2]">
+      <div className="flex justify-end"><span className="rounded-md bg-[#F2A93B] px-2 py-[3px] text-[10px] font-bold tracking-[.1em] text-[#0B1620]">DATA CONTOH · ILUSTRASI</span></div>
+      <div className="flex flex-1 flex-col items-center justify-center gap-5 text-center">
+        <Logo />
+        <div>
+          <div className="text-[34px] font-bold">Command Center <span className="text-[#2BB3A3]">Paja</span></div>
+          <div className="mt-0.5 text-[12px] font-semibold tracking-[.14em] text-[#9FB1BF]">TPID DKI JAKARTA · WAR ROOM DIREKSI</div>
+        </div>
+        <ul className="flex max-w-[330px] flex-col gap-1 text-left text-[13.5px] text-[#C9D5DE]">
+          <li>✓ HP Gubernur: harga 156 pasar, persetujuan intervensi TPID</li>
+          <li>✓ Video wall Command Center DKI & War Room 3 layar</li>
+          <li>✓ EIS HP 5 Direktur Pasar Jaya (SK Direksi 172/2022)</li>
+          <li>✓ Harga dari input juru tagih/AO di Konsol Pasar Jaya</li>
+        </ul>
+      </div>
+      <Link href="/cc/masuk/" className="block rounded-[10px] bg-[#2BB3A3] p-[15px] text-center text-[15px] font-bold text-[#0B1620]">Masuk</Link>
+      <div className="mt-4 border-t border-[#22394A] pt-3.5 text-center"><div className="text-[10px] font-semibold tracking-[.12em] text-[#9FB1BF]">POWERED BY</div><div className="mt-[3px] text-[13.5px] font-bold">PATROL · PaJaKu</div></div>
     </div>
   );
 }

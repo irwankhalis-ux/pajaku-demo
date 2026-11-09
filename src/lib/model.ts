@@ -67,13 +67,15 @@ export type Pengajuan = {
 export type Notif = { id: string; pedagangId: string; judul: string; isi: string; t: string; baca: boolean; href?: string };
 export type Interaksi = { t: string; pedagangId: string; kanal: string; catatan: string; oleh: string };
 export type Pengumuman = { id: string; judul: string; isi: string; sasaran: string; t: string; oleh: string; terkirim: number };
+/** Input harga TPID juru tagih/AO: 3 responden per komoditas; dikirim ke War Room & Command Center Gubernur. */
+export type EntriTPID = { id: string; pasar: string; tgl: string; t: string; oleh: string; baris: { komoditas: string; harga: [number, number, number]; median: number; acuan: number; tanda: boolean; foto: boolean }[] };
 export type Harga = { komoditas: string; satuan: string; kelompok: string; hariIni: number; kemarin: number; t: string };
 
 export type State = {
   versi: number; pedagang: Pedagang[]; tu: TU[]; dok: Dokumen[]; tiket: Tiket[]; anomali: Anomali[];
   log: Log[]; sesi: Sesi; seq: number;
   toko: Toko[]; produk: Produk[]; pesanan: Pesanan[]; kulakan: Kulakan[]; tagihan: Tagihan[];
-  pengajuan: Pengajuan[]; notif: Notif[]; interaksi: Interaksi[]; pengumuman: Pengumuman[]; harga: Harga[]; poin: Record<string, number>;
+  pengajuan: Pengajuan[]; notif: Notif[]; interaksi: Interaksi[]; pengumuman: Pengumuman[]; harga: Harga[]; poin: Record<string, number>; tpid?: EntriTPID[];
 };
 export const VERSI = 2;
 
