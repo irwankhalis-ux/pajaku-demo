@@ -437,13 +437,13 @@ export function pesanKulakan(tokoId: string, pemasokId: string, qty: Record<stri
   return null;
 }
 export const majukanKulakan = (id: string) => update((s) => ({ ...s, kulakan: s.kulakan.map((k) => (k.id === id ? { ...k, status: k.status === "dipesan" ? "dikonfirmasi" : k.status === "dikonfirmasi" ? "dikirim" : "diterima" } : k)) }));
-/** Kulakan ke Pasar Jaya Perkulakan (KulakanPatrol): katalog & harga bertingkat yang sama; DO Bank Jakarta khusus Emerald. */
+/** Kulakan ke Pasar Jaya Perkulakan (KulakanPaja): katalog & harga bertingkat yang sama; DO Bank Jakarta khusus Emerald. */
 export function pesanKulakanPJ(tokoId: string, items: { nama: string; qty: number; sat: string; harga: number }[], bayar: Kulakan["bayar"]): string | null {
   if (!items.length) return "Pilih minimal satu barang.";
   const s0 = load();
   const tk = s0.toko.find((t) => t.id === tokoId)!;
   if (bayar.startsWith("do") && kategoriOf(s0, tk.pedagangId) !== "E") return "Pembiayaan DO Bank Jakarta khusus pedagang Emerald.";
-  update((s) => ({ ...s, seq: s.seq + 1, kulakan: [{ id: `KP-2611-${String(700 + s.seq).padStart(5, "0")}`, tokoId, pemasok: "Pasar Jaya · Perkulakan dan Ritel (KulakanPatrol)", items, bayar, status: "dipesan", tgl: sekarang() }, ...s.kulakan], log: log(s, nama(s, tk.pedagangId), `kulakan ke Pasar Jaya Perkulakan (${bayar})`, tk.tuId) }));
+  update((s) => ({ ...s, seq: s.seq + 1, kulakan: [{ id: `KP-2611-${String(700 + s.seq).padStart(5, "0")}`, tokoId, pemasok: "Pasar Jaya · Perkulakan dan Ritel (KulakanPaja)", items, bayar, status: "dipesan", tgl: sekarang() }, ...s.kulakan], log: log(s, nama(s, tk.pedagangId), `kulakan ke Pasar Jaya Perkulakan (${bayar})`, tk.tuId) }));
   return null;
 }
 

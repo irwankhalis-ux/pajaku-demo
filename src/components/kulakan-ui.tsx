@@ -40,7 +40,7 @@ export function KPage({ judul, sub, children }: { judul: string; sub?: string; c
     <div className="flex min-h-dvh flex-col bg-[#F3F4F6] text-[#1A1F1C]">
       <header className="bg-[#1E293B] px-4 pt-[calc(14px+env(safe-area-inset-top))] pb-3 text-white">
         <div className="flex items-center justify-between gap-2">
-          <div className="min-w-0"><div className="text-[18px] font-extrabold">Kulakan<span className="text-[#FDBA74]">Patrol</span> <span className="text-[11.5px] font-semibold text-[#CBD5E1]">· pemasok</span></div><div className="truncate text-[11.5px] text-[#CBD5E1]">{staf.jabatan} · {staf.nama}</div></div>
+          <div className="min-w-0"><div className="text-[18px] font-extrabold">Kulakan<span className="text-[#FDBA74]">Paja</span> <span className="text-[11.5px] font-semibold text-[#CBD5E1]">· pemasok</span></div><div className="truncate text-[11.5px] text-[#CBD5E1]">{staf.jabatan} · {staf.nama}</div></div>
           <button onClick={() => { keluarK(); router.replace("/"); }} className="shrink-0 rounded-lg bg-[#334155] px-3 py-2 text-xs font-semibold">Keluar</button>
         </div>
         <div className="mt-2 flex items-center gap-2 rounded-lg bg-white px-2.5 py-1.5 text-[#4B5563]">

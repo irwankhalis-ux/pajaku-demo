@@ -14,7 +14,7 @@ export default function Masuk() {
     <div className="flex min-h-dvh flex-col bg-[#F3F4F6]">
       <header className="flex items-center gap-2.5 px-4 pt-[calc(18px+env(safe-area-inset-top))] pb-3">
         <Link href="/" aria-label="Kembali" className="flex size-11 items-center justify-center rounded-[10px] border border-[#E5E7EB] bg-white">‹</Link>
-        <div><div className="text-lg font-bold">Masuk KulakanPatrol</div><div className="text-xs text-[#4B5563]">Perumda Pasar Jaya · Direktorat Perkulakan dan Ritel</div></div>
+        <div><div className="text-lg font-bold">Masuk KulakanPaja</div><div className="text-xs text-[#4B5563]">Perumda Pasar Jaya · Direktorat Perkulakan dan Ritel</div></div>
       </header>
       <form onSubmit={(e) => { e.preventDefault(); const m = masuk(id, pin); if (m) return setErr(m); router.replace(HOME[STAF.find((x) => x.id === id)!.peran]); }} className="flex flex-1 flex-col gap-2 px-4 pb-6">
         {STAF.map((s) => (

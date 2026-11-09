@@ -32,7 +32,7 @@ export default function Katalog() {
               {staf.peran === "agent" && <p className="text-xs text-[#4B5563]">Sales Agent mengusulkan harga; penetapan oleh Merchandising.</p>}
             </section>
             <section className={`${kpanel} flex flex-col gap-2.5`}>
-              <b className="text-sm">Posisi harga di KulakanPatrol</b>
+              <b className="text-sm">Posisi harga di KulakanPaja</b>
               {[["Harga terendah pemasok lain", rp(Math.round(k.tiers[0][1] * 1.007))], ["Rata-rata pasar 7 hari", rp(Math.round(k.tiers[0][1] * 1.014))], ["Peringkat tampil ke TokoPaja", "#1 dari 3"]].map(([a, b]) => <div key={a} className="flex justify-between text-sm"><span className="text-[#4B5563]">{a}</span><b>{b}</b></div>)}
             </section>
             <section className={`${kpanel} flex flex-col gap-2.5`}>

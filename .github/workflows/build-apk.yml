@@ -2,7 +2,7 @@
 #   PaJaKu.apk  — aplikasi pedagang TokoPaja (id.patrol.pajaku)
 #   Konsol-PasarJaya.apk — back office, EIS Direksi, CRM, HP L1–L5 (id.patrol.pajaku.konsol)
 #   MitraPaja.apk — konsol Mitra Pengembang revitalisasi + EIS Direksi Mitra + pengawas Pasar Jaya (id.patrol.pajaku.mitra)
-#   KulakanPatrol.apk — aplikasi pemasok B2B (Pasar Jaya · Perkulakan dan Ritel) untuk toko TokoPaja (id.patrol.pajaku.kulakan)
+#   KulakanPaja.apk — aplikasi pemasok B2B (Pasar Jaya · Perkulakan dan Ritel) untuk toko TokoPaja (id.patrol.pajaku.kulakan)
 # Hasil: cabang `apk` berisi keempat APK + build.log.
 name: Build APK
 on:
@@ -44,11 +44,11 @@ jobs:
             cp capacitor.mitra.json capacitor.config.json && npx cap sync android && git checkout capacitor.config.json &&
             (cd android-mitra && chmod +x gradlew && ./gradlew assembleDebug --no-daemon) &&
             cp android-mitra/app/build/outputs/apk/debug/app-debug.apk apkout/MitraPaja.apk &&
-            echo "=== KulakanPatrol ===" &&
+            echo "=== KulakanPaja ===" &&
             NEXT_PUBLIC_APP=kulakan npm run build &&
             cp capacitor.kulakan.json capacitor.config.json && npx cap sync android && git checkout capacitor.config.json &&
             (cd android-kulakan && chmod +x gradlew && ./gradlew assembleDebug --no-daemon) &&
-            cp android-kulakan/app/build/outputs/apk/debug/app-debug.apk apkout/KulakanPatrol.apk
+            cp android-kulakan/app/build/outputs/apk/debug/app-debug.apk apkout/KulakanPaja.apk
           } 2>&1 | tee build.log
       - name: Simpan APK & log ke cabang apk
         if: always()

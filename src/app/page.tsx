@@ -127,7 +127,7 @@ function Kulakan() {
       <div className="flex justify-end"><span className="rounded-md border border-[#334155] px-2 py-[3px] text-[10px] font-semibold tracking-[.1em] text-[#CBD5E1]">DATA CONTOH · ILUSTRASI</span></div>
       <div className="flex flex-1 flex-col items-center justify-center gap-5 text-center">
         <div>
-          <div className="text-[38px] font-extrabold">Kulakan<span className="text-[#FDBA74]">Patrol</span></div>
+          <div className="text-[38px] font-extrabold">Kulakan<span className="text-[#FDBA74]">Paja</span></div>
           <div className="mt-0.5 text-[12px] font-semibold tracking-[.14em] text-[#CBD5E1]">APLIKASI PEMASOK B2B · PATROL</div>
         </div>
         <div className="flex w-[250px] flex-col items-center gap-2 rounded-3xl bg-white px-6 py-4 text-[#1A1F1C]">

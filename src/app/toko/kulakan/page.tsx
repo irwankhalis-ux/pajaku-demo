@@ -9,7 +9,7 @@ import { PEMASOK, type Kulakan, type Pedagang, type State } from "@/lib/model";
 import { kategoriOf, majukanKulakan, pesanKulakan, pesanKulakanPJ, rp } from "@/lib/store";
 import { KATALOG, hargaTier, perUnit } from "@/lib/kulakan";
 
-// Sinkron dengan aplikasi pemasok KulakanPatrol: katalog, harga bertingkat & pembiayaan DO Bank Jakarta yang sama.
+// Sinkron dengan aplikasi pemasok KulakanPaja: katalog, harga bertingkat & pembiayaan DO Bank Jakarta yang sama.
 const BAYAR_PJ: [Kulakan["bayar"], string][] = [["qris", "QRIS"], ["tunai", "Bayar saat terima"], ["do30", "DO 30 hari"], ["do60", "DO 60 hari"], ["do90", "DO 90 hari"]];
 const LABEL: Record<string, string> = { tunai: "bayar saat terima", tempo: "tempo", qris: "QRIS", do30: "DO Bank Jakarta 30 hari", do60: "DO Bank Jakarta 60 hari", do90: "DO Bank Jakarta 90 hari" };
 
@@ -37,7 +37,7 @@ function Isi({ s, p }: { s: State; p: Pedagang }) {
         <div className="flex flex-wrap gap-1.5"><button onClick={() => { setPm("PJ"); setQty({}); setMsg(""); }} className={chip(pm === "PJ")}>Pasar Jaya Perkulakan</button>{PEMASOK.filter((x) => x.id !== "KOP").map((x) => <button key={x.id} onClick={() => { setPm(x.id); setQty({}); setMsg(""); setBayar("tunai"); }} className={chip(pm === x.id)}>{x.nama.split(" ").slice(0, 2).join(" ")}</button>)}</div>
         {pm === "PJ" ? (
           <section className={`${card} flex flex-col gap-2 p-3.5`}>
-            <div><b className="text-sm">Perumda Pasar Jaya · Direktorat Perkulakan dan Ritel</b><div className="text-xs text-muted">Jakgrosir Kramat Jati · kirim ke hub pasar Anda subuh · lewat KulakanPatrol</div></div>
+            <div><b className="text-sm">Perumda Pasar Jaya · Direktorat Perkulakan dan Ritel</b><div className="text-xs text-muted">Jakgrosir Kramat Jati · kirim ke hub pasar Anda subuh · lewat KulakanPaja</div></div>
             {pjItems.map(({ k, q, h }) => (
               <div key={k.id} className="flex items-center justify-between gap-2 border-t border-[#EFF0EA] pt-2">
                 <span className="min-w-0"><b className="block text-[13.5px]">{k.nama}{k.tpid ? " 🏷️" : ""}</b><span className="text-xs text-muted">{rp(h)} / {k.satuan} ({k.isi}) · ≈{rp(perUnit(k, h))}/{k.perUnit}{k.tiers.length > 1 ? ` · ≥${k.tiers[1][0]} ${k.satuan} ${rp(k.tiers[1][1])}` : ""}</span></span>
@@ -65,7 +65,7 @@ function Isi({ s, p }: { s: State; p: Pedagang }) {
           let m: string | null;
           if (pm === "PJ") m = pesanKulakanPJ(toko.id, pjItems.filter((x) => x.q > 0).map(({ k, q, h }) => ({ nama: k.nama, qty: q, sat: k.satuan, harga: h })), bayar);
           else m = pesanKulakan(toko.id, pm, qty, "tunai");
-          setMsg(m ?? (pm === "PJ" ? "Pesanan masuk ke Sales Agent KulakanPatrol untuk dikonfirmasi." : "Pesanan terkirim ke pemasok.")); if (!m) setQty({});
+          setMsg(m ?? (pm === "PJ" ? "Pesanan masuk ke Sales Agent KulakanPaja untuk dikonfirmasi." : "Pesanan terkirim ke pemasok.")); if (!m) setQty({});
         }} className={btn}>Pesan {total ? rp(total) : ""}</button>
         {msg && <div role="status" className="text-[13px] text-mint-ink">{msg}</div>}
         <h2 className="mt-1 text-[15px] font-bold">Riwayat kulakan</h2>

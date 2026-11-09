@@ -9,7 +9,7 @@ import "./globals.css";
 import { IS_KONSOL, IS_KULAKAN, IS_MITRA } from "@/lib/app";
 
 export const metadata: Metadata = {
-  title: IS_KONSOL ? "Konsol Pasar Jaya" : IS_MITRA ? "MitraPaja" : IS_KULAKAN ? "KulakanPatrol" : "TokoPaja · PaJaKu",
+  title: IS_KONSOL ? "Konsol Pasar Jaya" : IS_MITRA ? "MitraPaja" : IS_KULAKAN ? "KulakanPaja" : "TokoPaja · PaJaKu",
   description: "e-SHPTU, e-SIPTU dan data tempat usaha Anda di Pasar Jaya, dalam satu aplikasi.",
   appleWebApp: { capable: true, title: "PaJaKu", statusBarStyle: "default" },
 };

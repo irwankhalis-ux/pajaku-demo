@@ -1,9 +1,9 @@
 "use client";
 
-// KulakanPatrol — aplikasi PEMASOK (B2B) untuk memasok toko TokoPaja (pedagang ber-e-SIPTU) di pasar Pasar Jaya.
+// KulakanPaja — aplikasi PEMASOK (B2B) untuk memasok toko TokoPaja (pedagang ber-e-SIPTU) di pasar Pasar Jaya.
 // Akun contoh: Perumda Pasar Jaya · Direktorat Perkulakan dan Ritel (Jakgrosir Kramat Jati).
 // Katalog & harga di sini SAMA dengan yang tampil di menu Kulakan aplikasi TokoPaja dan ringkasan Perkulakan di Konsol Pasar Jaya.
-// Semua nama & angka ilustrasi (kanvas "KulakanPatrol — UI HP & Desktop").
+// Semua nama & angka ilustrasi (kanvas "KulakanPaja — UI HP & Desktop").
 import { useSyncExternalStore } from "react";
 
 export type Grup = "Minyak & Lemak" | "Gula, Tepung & Bahan kue" | "Telur & Susu";
@@ -105,7 +105,7 @@ export function seed(): KState {
       { id: "TPID-2", komoditas: "Telur ayam ras", sku: "TA1", volume: 60, satuan: "ton", realisasi: 38, hargaJual: 26500, acuan: 30000, sebelum: 32000, sesudah: 30800, pasar: 31, status: "pasokan kurang" },
       { id: "TPID-3", komoditas: "Gula pasir", sku: "GP1", volume: 30, satuan: "ton", realisasi: 30, hargaJual: 16200, acuan: 17500, sebelum: 18300, sesudah: 17400, pasar: 18, status: "selesai" },
     ],
-    log: [{ t: "8 Nov 05.00", siapa: "Sistem", apa: "Data contoh KulakanPatrol dimuat" }],
+    log: [{ t: "8 Nov 05.00", siapa: "Sistem", apa: "Data contoh KulakanPaja dimuat" }],
   };
 }
 
@@ -119,7 +119,7 @@ export const EIS = {
 };
 
 // ---------- store ----------
-const KEY = "kulakanpatrol-v1";
+const KEY = "kulakanpaja-v1";
 const ls = new Set<() => void>();
 let st: KState | null = null;
 const SERVER = seed();

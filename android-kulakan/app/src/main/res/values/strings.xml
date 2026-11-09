@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">KulakanPatrol</string>
-    <string name="title_activity_main">KulakanPatrol</string>
+    <string name="app_name">KulakanPaja</string>
+    <string name="title_activity_main">KulakanPaja</string>
     <string name="package_name">id.patrol.pajakudemo</string>
     <string name="custom_url_scheme">id.patrol.pajakudemo</string>
 </resources>
