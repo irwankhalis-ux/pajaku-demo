@@ -1,0 +1,1281 @@
+npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 473 packages, and audited 480 packages in 44s
+
+163 packages are looking for funding
+  run `npm fund` for details
+
+8 moderate severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+=== PaJaKu (TokoPaja) ===
+
+> pajaku@1.0.0 build
+> next build
+
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.ts took 32ms
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.4s
+  Running TypeScript ...
+  Finished TypeScript in 7.4s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/79) ...
+  Generating static pages using 3 workers (19/79) 
+  Generating static pages using 3 workers (39/79) 
+  Generating static pages using 3 workers (59/79) 
+✓ Generating static pages using 3 workers (79/79) in 976ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /akun
+├ ○ /beranda
+├ ○ /bo/audit
+├ ○ /bo/crm
+├ ○ /bo/direktorat
+├ ○ /bo/dokumen
+├ ○ /bo/eis
+├ ○ /bo/migrasi
+├ ○ /bo/operasi
+├ ○ /bo/perkulakan
+├ ○ /bo/tagihan
+├ ○ /bo/toko
+├ ○ /bo/tpid
+├ ○ /cc/eis
+├ ○ /cc/gubernur
+├ ○ /cc/log
+├ ○ /cc/masuk
+├ ○ /cc/wall
+├ ○ /daftar
+├ ○ /direksi
+├ ○ /dokumen
+├ ○ /harga
+├ ○ /kadiv
+├ ○ /kepala
+├ ○ /keuangan
+├ ○ /koreksi
+├ ○ /kp/audit
+├ ○ /kp/beranda
+├ ○ /kp/crm
+├ ○ /kp/eis
+├ ○ /kp/gudang
+├ ○ /kp/katalog
+├ ○ /kp/keuangan
+├ ○ /kp/masuk
+├ ○ /kp/organisasi
+├ ○ /kp/patrol
+├ ○ /kp/pesanan
+├ ○ /kp/tagihan
+├ ○ /kp/tpid
+├ ○ /layanan
+├ ○ /m/audit
+├ ○ /m/crm
+├ ○ /m/dashboard
+├ ○ /m/eis
+├ ○ /m/eksisting
+├ ○ /m/hp-pedagang
+├ ○ /m/kredit
+├ ○ /m/masuk
+├ ○ /m/pengawas
+├ ○ /m/pesanan
+├ ○ /m/progres
+├ ○ /m/prospek
+├ ○ /m/tagihan
+├ ○ /m/tata-kelola
+├ ○ /m/unit
+├ ○ /manager
+├ ○ /manifest.webmanifest
+├ ○ /masuk
+├ ○ /migrasi
+├ ○ /pengajuan
+├ ○ /perpanjang
+├ ○ /persetujuan
+├ ○ /pesan
+├ ○ /petugas
+├ ○ /program
+├ ○ /registrasi-pengelola
+├ ○ /staf
+├ ○ /toko
+├ ○ /toko/aktivasi
+├ ○ /toko/kulakan
+├ ○ /toko/pelanggan
+├ ○ /toko/pesanan
+├ ○ /toko/produk
+├ ○ /tu
+└ ○ /verifikasi
+
+
+○  (Static)  prerendered as static content
+
+✔ Copying web assets from out to android/app/src/main/assets/public in 72.22ms
+✔ Creating capacitor.config.json in android/app/src/main/assets in 616.85μs
+✔ copy android in 86.59ms
+✔ Updating Android plugins in 2.56ms
+✔ update android in 22.23ms
+[info] Sync finished in 0.128s
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Configure project :capacitor-cordova-android-plugins
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :capacitor-android:preBuild UP-TO-DATE
+> Task :capacitor-android:preDebugBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preDebugBuild UP-TO-DATE
+> Task :capacitor-android:writeDebugAarMetadata
+> Task :capacitor-cordova-android-plugins:writeDebugAarMetadata
+> Task :app:javaPreCompileDebug
+> Task :capacitor-android:processDebugNavigationResources
+> Task :capacitor-cordova-android-plugins:processDebugNavigationResources
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :capacitor-android:generateDebugResValues
+> Task :app:compileDebugNavigationResources
+> Task :capacitor-android:generateDebugResources
+> Task :capacitor-android:packageDebugResources
+> Task :capacitor-cordova-android-plugins:generateDebugResValues
+> Task :capacitor-cordova-android-plugins:generateDebugResources
+> Task :capacitor-cordova-android-plugins:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :capacitor-android:extractDeepLinksDebug
+> Task :capacitor-cordova-android-plugins:extractDeepLinksDebug
+> Task :capacitor-android:compileDebugLibraryResources
+> Task :capacitor-cordova-android-plugins:processDebugManifest
+> Task :capacitor-android:processDebugManifest
+> Task :capacitor-cordova-android-plugins:compileDebugLibraryResources
+> Task :capacitor-android:parseDebugLocalResources
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :capacitor-android:javaPreCompileDebug
+> Task :capacitor-cordova-android-plugins:javaPreCompileDebug
+> Task :capacitor-cordova-android-plugins:parseDebugLocalResources
+> Task :capacitor-android:generateDebugRFile
+> Task :app:mergeDebugShaders
+> Task :capacitor-cordova-android-plugins:generateDebugRFile
+
+> Task :capacitor-android:compileDebugJavaWithJavac
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :capacitor-cordova-android-plugins:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:bundleLibCompileToJarDebug
+> Task :capacitor-android:mergeDebugShaders
+> Task :capacitor-android:compileDebugShaders NO-SOURCE
+> Task :capacitor-android:generateDebugAssets UP-TO-DATE
+> Task :capacitor-android:bundleLibCompileToJarDebug
+> Task :capacitor-android:mergeDebugAssets
+> Task :capacitor-cordova-android-plugins:mergeDebugShaders
+> Task :capacitor-cordova-android-plugins:compileDebugShaders NO-SOURCE
+> Task :capacitor-cordova-android-plugins:generateDebugAssets UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:mergeDebugAssets
+> Task :app:mergeDebugAssets
+> Task :app:processDebugResources
+> Task :capacitor-android:bundleLibRuntimeToJarDebug
+> Task :app:compileDebugJavaWithJavac
+> Task :app:compressDebugAssets
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToJarDebug
+> Task :app:desugarDebugFileDependencies
+> Task :app:dexBuilderDebug
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :capacitor-android:processDebugJavaRes NO-SOURCE
+> Task :capacitor-cordova-android-plugins:processDebugJavaRes NO-SOURCE
+> Task :app:checkDebugDuplicateClasses
+> Task :capacitor-android:bundleLibRuntimeToDirDebug
+> Task :app:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToDirDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:mergeDebugJniLibFolders
+> Task :capacitor-android:mergeDebugJniLibFolders
+> Task :capacitor-android:mergeDebugNativeLibs NO-SOURCE
+> Task :app:mergeProjectDexDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugJniLibFolders
+> Task :capacitor-android:copyDebugJniLibsProjectOnly
+> Task :app:mergeLibDexDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugNativeLibs NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyDebugJniLibsProjectOnly
+> Task :app:validateSigningDebug
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :capacitor-android:checkDebugAarMetadata
+> Task :capacitor-android:stripDebugDebugSymbols NO-SOURCE
+> Task :capacitor-android:copyDebugJniLibsProjectAndLocalJars
+> Task :app:mergeExtDexDebug
+> Task :capacitor-android:extractDebugAnnotations
+> Task :capacitor-android:extractDeepLinksForAarDebug
+> Task :capacitor-android:mergeDebugGeneratedProguardFiles
+> Task :capacitor-android:mergeDebugConsumerProguardFiles
+> Task :capacitor-android:prepareDebugArtProfile
+> Task :capacitor-android:prepareLintJarForPublish
+> Task :capacitor-android:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:checkDebugAarMetadata
+> Task :capacitor-android:syncDebugLibJars
+> Task :capacitor-android:bundleDebugAar
+> Task :capacitor-android:assembleDebug
+> Task :capacitor-cordova-android-plugins:stripDebugDebugSymbols NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyDebugJniLibsProjectAndLocalJars
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :capacitor-cordova-android-plugins:extractDebugAnnotations
+> Task :capacitor-cordova-android-plugins:extractDeepLinksForAarDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugGeneratedProguardFiles
+> Task :capacitor-cordova-android-plugins:mergeDebugConsumerProguardFiles
+> Task :capacitor-cordova-android-plugins:prepareDebugArtProfile
+> Task :capacitor-cordova-android-plugins:prepareLintJarForPublish
+> Task :capacitor-cordova-android-plugins:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:syncDebugLibJars
+> Task :capacitor-cordova-android-plugins:bundleDebugAar
+> Task :capacitor-cordova-android-plugins:assembleDebug
+
+[Incubating] Problems report is available at: file:///home/runner/work/pajaku-demo/pajaku-demo/android/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 26s
+93 actionable tasks: 93 executed
+=== Konsol Pasar Jaya ===
+
+> pajaku@1.0.0 build
+> next build
+
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.ts took 31ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 649ms
+  Running TypeScript ...
+  Finished TypeScript in 1934ms ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/79) ...
+  Generating static pages using 3 workers (19/79) 
+  Generating static pages using 3 workers (39/79) 
+  Generating static pages using 3 workers (59/79) 
+✓ Generating static pages using 3 workers (79/79) in 956ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /akun
+├ ○ /beranda
+├ ○ /bo/audit
+├ ○ /bo/crm
+├ ○ /bo/direktorat
+├ ○ /bo/dokumen
+├ ○ /bo/eis
+├ ○ /bo/migrasi
+├ ○ /bo/operasi
+├ ○ /bo/perkulakan
+├ ○ /bo/tagihan
+├ ○ /bo/toko
+├ ○ /bo/tpid
+├ ○ /cc/eis
+├ ○ /cc/gubernur
+├ ○ /cc/log
+├ ○ /cc/masuk
+├ ○ /cc/wall
+├ ○ /daftar
+├ ○ /direksi
+├ ○ /dokumen
+├ ○ /harga
+├ ○ /kadiv
+├ ○ /kepala
+├ ○ /keuangan
+├ ○ /koreksi
+├ ○ /kp/audit
+├ ○ /kp/beranda
+├ ○ /kp/crm
+├ ○ /kp/eis
+├ ○ /kp/gudang
+├ ○ /kp/katalog
+├ ○ /kp/keuangan
+├ ○ /kp/masuk
+├ ○ /kp/organisasi
+├ ○ /kp/patrol
+├ ○ /kp/pesanan
+├ ○ /kp/tagihan
+├ ○ /kp/tpid
+├ ○ /layanan
+├ ○ /m/audit
+├ ○ /m/crm
+├ ○ /m/dashboard
+├ ○ /m/eis
+├ ○ /m/eksisting
+├ ○ /m/hp-pedagang
+├ ○ /m/kredit
+├ ○ /m/masuk
+├ ○ /m/pengawas
+├ ○ /m/pesanan
+├ ○ /m/progres
+├ ○ /m/prospek
+├ ○ /m/tagihan
+├ ○ /m/tata-kelola
+├ ○ /m/unit
+├ ○ /manager
+├ ○ /manifest.webmanifest
+├ ○ /masuk
+├ ○ /migrasi
+├ ○ /pengajuan
+├ ○ /perpanjang
+├ ○ /persetujuan
+├ ○ /pesan
+├ ○ /petugas
+├ ○ /program
+├ ○ /registrasi-pengelola
+├ ○ /staf
+├ ○ /toko
+├ ○ /toko/aktivasi
+├ ○ /toko/kulakan
+├ ○ /toko/pelanggan
+├ ○ /toko/pesanan
+├ ○ /toko/produk
+├ ○ /tu
+└ ○ /verifikasi
+
+
+○  (Static)  prerendered as static content
+
+✔ Copying web assets from out to android-konsol/app/src/main/assets/public in 69.23ms
+✔ Creating capacitor.config.json in android-konsol/app/src/main/assets in 1.10ms
+✔ copy android in 82.46ms
+✔ Updating Android plugins in 2.70ms
+✔ update android in 22.66ms
+[info] Sync finished in 0.124s
+Updated 1 path from the index
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Configure project :capacitor-cordova-android-plugins
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :capacitor-android:preBuild UP-TO-DATE
+> Task :capacitor-android:preDebugBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preDebugBuild UP-TO-DATE
+> Task :capacitor-android:writeDebugAarMetadata
+> Task :app:javaPreCompileDebug
+> Task :capacitor-cordova-android-plugins:writeDebugAarMetadata
+> Task :capacitor-android:processDebugNavigationResources
+> Task :capacitor-cordova-android-plugins:processDebugNavigationResources
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :app:compileDebugNavigationResources
+> Task :capacitor-android:generateDebugResValues
+> Task :capacitor-android:generateDebugResources
+> Task :capacitor-android:packageDebugResources
+> Task :capacitor-cordova-android-plugins:generateDebugResValues
+> Task :capacitor-cordova-android-plugins:generateDebugResources
+> Task :capacitor-cordova-android-plugins:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :capacitor-android:extractDeepLinksDebug
+> Task :capacitor-cordova-android-plugins:extractDeepLinksDebug
+> Task :capacitor-android:processDebugManifest
+> Task :capacitor-cordova-android-plugins:processDebugManifest
+> Task :app:parseDebugLocalResources
+> Task :app:mergeDebugResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :capacitor-android:compileDebugLibraryResources
+> Task :capacitor-cordova-android-plugins:compileDebugLibraryResources
+> Task :capacitor-android:parseDebugLocalResources
+> Task :capacitor-cordova-android-plugins:parseDebugLocalResources
+> Task :capacitor-android:javaPreCompileDebug
+> Task :capacitor-cordova-android-plugins:javaPreCompileDebug
+> Task :app:mergeDebugShaders
+> Task :capacitor-android:generateDebugRFile
+> Task :capacitor-cordova-android-plugins:generateDebugRFile
+
+> Task :capacitor-android:compileDebugJavaWithJavac
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :capacitor-cordova-android-plugins:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :capacitor-android:mergeDebugShaders
+> Task :capacitor-android:compileDebugShaders NO-SOURCE
+> Task :capacitor-android:generateDebugAssets UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:bundleLibCompileToJarDebug
+> Task :capacitor-android:mergeDebugAssets
+> Task :capacitor-android:bundleLibCompileToJarDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugShaders
+> Task :capacitor-cordova-android-plugins:compileDebugShaders NO-SOURCE
+> Task :capacitor-cordova-android-plugins:generateDebugAssets UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:mergeDebugAssets
+> Task :app:mergeDebugAssets
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToJarDebug
+> Task :app:processDebugResources
+> Task :capacitor-android:bundleLibRuntimeToJarDebug
+> Task :app:compressDebugAssets
+> Task :app:compileDebugJavaWithJavac
+> Task :app:desugarDebugFileDependencies
+> Task :app:dexBuilderDebug
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :capacitor-android:processDebugJavaRes NO-SOURCE
+> Task :capacitor-cordova-android-plugins:processDebugJavaRes NO-SOURCE
+> Task :app:checkDebugDuplicateClasses
+> Task :capacitor-android:bundleLibRuntimeToDirDebug
+> Task :app:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToDirDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :capacitor-android:mergeDebugJniLibFolders
+> Task :capacitor-android:mergeDebugNativeLibs NO-SOURCE
+> Task :capacitor-android:copyDebugJniLibsProjectOnly
+> Task :capacitor-cordova-android-plugins:mergeDebugJniLibFolders
+> Task :capacitor-cordova-android-plugins:mergeDebugNativeLibs NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyDebugJniLibsProjectOnly
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :capacitor-android:checkDebugAarMetadata
+> Task :capacitor-android:stripDebugDebugSymbols NO-SOURCE
+> Task :capacitor-android:copyDebugJniLibsProjectAndLocalJars
+> Task :capacitor-android:extractDebugAnnotations
+> Task :capacitor-android:extractDeepLinksForAarDebug
+> Task :capacitor-android:mergeDebugGeneratedProguardFiles
+> Task :capacitor-android:mergeDebugConsumerProguardFiles
+> Task :capacitor-android:prepareDebugArtProfile
+> Task :capacitor-android:prepareLintJarForPublish
+> Task :capacitor-android:mergeDebugJavaResource
+> Task :capacitor-android:syncDebugLibJars
+> Task :capacitor-android:bundleDebugAar
+> Task :capacitor-android:assembleDebug
+> Task :capacitor-cordova-android-plugins:checkDebugAarMetadata
+> Task :capacitor-cordova-android-plugins:stripDebugDebugSymbols NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyDebugJniLibsProjectAndLocalJars
+> Task :capacitor-cordova-android-plugins:extractDebugAnnotations
+> Task :capacitor-cordova-android-plugins:extractDeepLinksForAarDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugGeneratedProguardFiles
+> Task :capacitor-cordova-android-plugins:mergeDebugConsumerProguardFiles
+> Task :capacitor-cordova-android-plugins:prepareDebugArtProfile
+> Task :capacitor-cordova-android-plugins:prepareLintJarForPublish
+> Task :capacitor-cordova-android-plugins:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:syncDebugLibJars
+> Task :capacitor-cordova-android-plugins:bundleDebugAar
+> Task :capacitor-cordova-android-plugins:assembleDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:mergeLibDexDebug
+> Task :app:mergeExtDexDebug
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+
+[Incubating] Problems report is available at: file:///home/runner/work/pajaku-demo/pajaku-demo/android-konsol/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 26s
+93 actionable tasks: 93 executed
+=== MitraPaja ===
+
+> pajaku@1.0.0 build
+> next build
+
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.ts took 26ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 662ms
+  Running TypeScript ...
+  Finished TypeScript in 1968ms ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/79) ...
+  Generating static pages using 3 workers (19/79) 
+  Generating static pages using 3 workers (39/79) 
+  Generating static pages using 3 workers (59/79) 
+✓ Generating static pages using 3 workers (79/79) in 975ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /akun
+├ ○ /beranda
+├ ○ /bo/audit
+├ ○ /bo/crm
+├ ○ /bo/direktorat
+├ ○ /bo/dokumen
+├ ○ /bo/eis
+├ ○ /bo/migrasi
+├ ○ /bo/operasi
+├ ○ /bo/perkulakan
+├ ○ /bo/tagihan
+├ ○ /bo/toko
+├ ○ /bo/tpid
+├ ○ /cc/eis
+├ ○ /cc/gubernur
+├ ○ /cc/log
+├ ○ /cc/masuk
+├ ○ /cc/wall
+├ ○ /daftar
+├ ○ /direksi
+├ ○ /dokumen
+├ ○ /harga
+├ ○ /kadiv
+├ ○ /kepala
+├ ○ /keuangan
+├ ○ /koreksi
+├ ○ /kp/audit
+├ ○ /kp/beranda
+├ ○ /kp/crm
+├ ○ /kp/eis
+├ ○ /kp/gudang
+├ ○ /kp/katalog
+├ ○ /kp/keuangan
+├ ○ /kp/masuk
+├ ○ /kp/organisasi
+├ ○ /kp/patrol
+├ ○ /kp/pesanan
+├ ○ /kp/tagihan
+├ ○ /kp/tpid
+├ ○ /layanan
+├ ○ /m/audit
+├ ○ /m/crm
+├ ○ /m/dashboard
+├ ○ /m/eis
+├ ○ /m/eksisting
+├ ○ /m/hp-pedagang
+├ ○ /m/kredit
+├ ○ /m/masuk
+├ ○ /m/pengawas
+├ ○ /m/pesanan
+├ ○ /m/progres
+├ ○ /m/prospek
+├ ○ /m/tagihan
+├ ○ /m/tata-kelola
+├ ○ /m/unit
+├ ○ /manager
+├ ○ /manifest.webmanifest
+├ ○ /masuk
+├ ○ /migrasi
+├ ○ /pengajuan
+├ ○ /perpanjang
+├ ○ /persetujuan
+├ ○ /pesan
+├ ○ /petugas
+├ ○ /program
+├ ○ /registrasi-pengelola
+├ ○ /staf
+├ ○ /toko
+├ ○ /toko/aktivasi
+├ ○ /toko/kulakan
+├ ○ /toko/pelanggan
+├ ○ /toko/pesanan
+├ ○ /toko/produk
+├ ○ /tu
+└ ○ /verifikasi
+
+
+○  (Static)  prerendered as static content
+
+✔ Copying web assets from out to android-mitra/app/src/main/assets/public in 70.35ms
+✔ Creating capacitor.config.json in android-mitra/app/src/main/assets in 618.81μs
+✔ copy android in 85.40ms
+✔ Updating Android plugins in 2.53ms
+✔ update android in 21.52ms
+[info] Sync finished in 0.127s
+Updated 1 path from the index
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Configure project :capacitor-cordova-android-plugins
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :capacitor-android:preBuild UP-TO-DATE
+> Task :capacitor-android:preDebugBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preDebugBuild UP-TO-DATE
+> Task :app:javaPreCompileDebug
+> Task :capacitor-android:writeDebugAarMetadata
+> Task :capacitor-cordova-android-plugins:writeDebugAarMetadata
+> Task :capacitor-android:processDebugNavigationResources
+> Task :capacitor-cordova-android-plugins:processDebugNavigationResources
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :capacitor-android:generateDebugResValues
+> Task :app:compileDebugNavigationResources
+> Task :capacitor-android:generateDebugResources
+> Task :capacitor-android:packageDebugResources
+> Task :capacitor-cordova-android-plugins:generateDebugResValues
+> Task :capacitor-cordova-android-plugins:generateDebugResources
+> Task :capacitor-cordova-android-plugins:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :capacitor-android:extractDeepLinksDebug
+> Task :capacitor-cordova-android-plugins:extractDeepLinksDebug
+> Task :capacitor-cordova-android-plugins:processDebugManifest
+> Task :capacitor-android:processDebugManifest
+> Task :capacitor-android:compileDebugLibraryResources
+> Task :app:parseDebugLocalResources
+> Task :app:mergeDebugResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :capacitor-cordova-android-plugins:compileDebugLibraryResources
+> Task :capacitor-android:javaPreCompileDebug
+> Task :capacitor-cordova-android-plugins:javaPreCompileDebug
+> Task :capacitor-android:parseDebugLocalResources
+> Task :capacitor-cordova-android-plugins:parseDebugLocalResources
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :capacitor-android:mergeDebugShaders
+> Task :capacitor-android:compileDebugShaders NO-SOURCE
+> Task :capacitor-android:generateDebugAssets UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:generateDebugRFile
+> Task :capacitor-android:generateDebugRFile
+> Task :capacitor-android:mergeDebugAssets
+> Task :app:processDebugResources
+
+> Task :capacitor-android:compileDebugJavaWithJavac
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :capacitor-cordova-android-plugins:compileDebugJavaWithJavac NO-SOURCE
+> Task :capacitor-cordova-android-plugins:bundleLibCompileToJarDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugShaders
+> Task :capacitor-cordova-android-plugins:compileDebugShaders NO-SOURCE
+> Task :capacitor-cordova-android-plugins:generateDebugAssets UP-TO-DATE
+> Task :capacitor-android:bundleLibCompileToJarDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugAssets
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugAssets
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToJarDebug
+> Task :app:desugarDebugFileDependencies
+> Task :capacitor-android:bundleLibRuntimeToJarDebug
+> Task :app:compressDebugAssets
+> Task :app:dexBuilderDebug
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :capacitor-android:processDebugJavaRes NO-SOURCE
+> Task :capacitor-cordova-android-plugins:processDebugJavaRes NO-SOURCE
+> Task :app:checkDebugDuplicateClasses
+> Task :capacitor-android:bundleLibRuntimeToDirDebug
+> Task :app:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToDirDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :capacitor-android:mergeDebugJniLibFolders
+> Task :capacitor-android:mergeDebugNativeLibs NO-SOURCE
+> Task :capacitor-android:copyDebugJniLibsProjectOnly
+> Task :capacitor-cordova-android-plugins:mergeDebugJniLibFolders
+> Task :capacitor-cordova-android-plugins:mergeDebugNativeLibs NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyDebugJniLibsProjectOnly
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :capacitor-android:checkDebugAarMetadata
+> Task :capacitor-android:stripDebugDebugSymbols NO-SOURCE
+> Task :capacitor-android:copyDebugJniLibsProjectAndLocalJars
+> Task :capacitor-android:extractDebugAnnotations
+> Task :capacitor-android:extractDeepLinksForAarDebug
+> Task :capacitor-android:mergeDebugGeneratedProguardFiles
+> Task :capacitor-android:mergeDebugConsumerProguardFiles
+> Task :capacitor-android:prepareDebugArtProfile
+> Task :capacitor-android:prepareLintJarForPublish
+> Task :capacitor-android:mergeDebugJavaResource
+> Task :capacitor-android:syncDebugLibJars
+> Task :capacitor-android:bundleDebugAar
+> Task :capacitor-android:assembleDebug
+> Task :capacitor-cordova-android-plugins:checkDebugAarMetadata
+> Task :capacitor-cordova-android-plugins:stripDebugDebugSymbols NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyDebugJniLibsProjectAndLocalJars
+> Task :capacitor-cordova-android-plugins:extractDebugAnnotations
+> Task :capacitor-cordova-android-plugins:extractDeepLinksForAarDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugGeneratedProguardFiles
+> Task :capacitor-cordova-android-plugins:mergeDebugConsumerProguardFiles
+> Task :capacitor-cordova-android-plugins:prepareDebugArtProfile
+> Task :capacitor-cordova-android-plugins:prepareLintJarForPublish
+> Task :capacitor-cordova-android-plugins:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:syncDebugLibJars
+> Task :capacitor-cordova-android-plugins:bundleDebugAar
+> Task :capacitor-cordova-android-plugins:assembleDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:mergeLibDexDebug
+> Task :app:mergeExtDexDebug
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+
+[Incubating] Problems report is available at: file:///home/runner/work/pajaku-demo/pajaku-demo/android-mitra/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 25s
+93 actionable tasks: 93 executed
+=== KulakanPaja ===
+
+> pajaku@1.0.0 build
+> next build
+
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.ts took 27ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 724ms
+  Running TypeScript ...
+  Finished TypeScript in 1970ms ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/79) ...
+  Generating static pages using 3 workers (19/79) 
+  Generating static pages using 3 workers (39/79) 
+  Generating static pages using 3 workers (59/79) 
+✓ Generating static pages using 3 workers (79/79) in 989ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /akun
+├ ○ /beranda
+├ ○ /bo/audit
+├ ○ /bo/crm
+├ ○ /bo/direktorat
+├ ○ /bo/dokumen
+├ ○ /bo/eis
+├ ○ /bo/migrasi
+├ ○ /bo/operasi
+├ ○ /bo/perkulakan
+├ ○ /bo/tagihan
+├ ○ /bo/toko
+├ ○ /bo/tpid
+├ ○ /cc/eis
+├ ○ /cc/gubernur
+├ ○ /cc/log
+├ ○ /cc/masuk
+├ ○ /cc/wall
+├ ○ /daftar
+├ ○ /direksi
+├ ○ /dokumen
+├ ○ /harga
+├ ○ /kadiv
+├ ○ /kepala
+├ ○ /keuangan
+├ ○ /koreksi
+├ ○ /kp/audit
+├ ○ /kp/beranda
+├ ○ /kp/crm
+├ ○ /kp/eis
+├ ○ /kp/gudang
+├ ○ /kp/katalog
+├ ○ /kp/keuangan
+├ ○ /kp/masuk
+├ ○ /kp/organisasi
+├ ○ /kp/patrol
+├ ○ /kp/pesanan
+├ ○ /kp/tagihan
+├ ○ /kp/tpid
+├ ○ /layanan
+├ ○ /m/audit
+├ ○ /m/crm
+├ ○ /m/dashboard
+├ ○ /m/eis
+├ ○ /m/eksisting
+├ ○ /m/hp-pedagang
+├ ○ /m/kredit
+├ ○ /m/masuk
+├ ○ /m/pengawas
+├ ○ /m/pesanan
+├ ○ /m/progres
+├ ○ /m/prospek
+├ ○ /m/tagihan
+├ ○ /m/tata-kelola
+├ ○ /m/unit
+├ ○ /manager
+├ ○ /manifest.webmanifest
+├ ○ /masuk
+├ ○ /migrasi
+├ ○ /pengajuan
+├ ○ /perpanjang
+├ ○ /persetujuan
+├ ○ /pesan
+├ ○ /petugas
+├ ○ /program
+├ ○ /registrasi-pengelola
+├ ○ /staf
+├ ○ /toko
+├ ○ /toko/aktivasi
+├ ○ /toko/kulakan
+├ ○ /toko/pelanggan
+├ ○ /toko/pesanan
+├ ○ /toko/produk
+├ ○ /tu
+└ ○ /verifikasi
+
+
+○  (Static)  prerendered as static content
+
+✔ Copying web assets from out to android-kulakan/app/src/main/assets/public in 75.44ms
+✔ Creating capacitor.config.json in android-kulakan/app/src/main/assets in 686.10μs
+✔ copy android in 89.88ms
+✔ Updating Android plugins in 2.82ms
+✔ update android in 24.19ms
+[info] Sync finished in 0.134s
+Updated 1 path from the index
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Configure project :capacitor-cordova-android-plugins
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :capacitor-android:preBuild UP-TO-DATE
+> Task :capacitor-android:preDebugBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preDebugBuild UP-TO-DATE
+> Task :app:javaPreCompileDebug
+> Task :capacitor-android:processDebugNavigationResources
+> Task :capacitor-android:writeDebugAarMetadata
+> Task :capacitor-cordova-android-plugins:writeDebugAarMetadata
+> Task :capacitor-cordova-android-plugins:processDebugNavigationResources
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :app:compileDebugNavigationResources
+> Task :capacitor-android:generateDebugResValues
+> Task :capacitor-android:generateDebugResources
+> Task :capacitor-android:packageDebugResources
+> Task :capacitor-cordova-android-plugins:generateDebugResValues
+> Task :capacitor-cordova-android-plugins:generateDebugResources
+> Task :capacitor-cordova-android-plugins:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :capacitor-android:extractDeepLinksDebug
+> Task :capacitor-cordova-android-plugins:extractDeepLinksDebug
+> Task :capacitor-android:processDebugManifest
+> Task :capacitor-cordova-android-plugins:processDebugManifest
+> Task :app:parseDebugLocalResources
+> Task :capacitor-android:compileDebugLibraryResources
+> Task :app:mergeDebugResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :capacitor-cordova-android-plugins:compileDebugLibraryResources
+> Task :app:processDebugManifestForPackage
+> Task :capacitor-android:javaPreCompileDebug
+> Task :capacitor-android:parseDebugLocalResources
+> Task :capacitor-cordova-android-plugins:javaPreCompileDebug
+> Task :capacitor-cordova-android-plugins:parseDebugLocalResources
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :capacitor-android:mergeDebugShaders
+> Task :capacitor-android:compileDebugShaders NO-SOURCE
+> Task :capacitor-android:generateDebugAssets UP-TO-DATE
+> Task :capacitor-android:generateDebugRFile
+> Task :capacitor-cordova-android-plugins:generateDebugRFile
+> Task :capacitor-android:mergeDebugAssets
+> Task :app:processDebugResources
+
+> Task :capacitor-android:compileDebugJavaWithJavac
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :capacitor-cordova-android-plugins:compileDebugJavaWithJavac NO-SOURCE
+> Task :capacitor-cordova-android-plugins:bundleLibCompileToJarDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugShaders
+> Task :capacitor-cordova-android-plugins:compileDebugShaders NO-SOURCE
+> Task :capacitor-cordova-android-plugins:generateDebugAssets UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:mergeDebugAssets
+> Task :capacitor-android:bundleLibCompileToJarDebug
+> Task :app:mergeDebugAssets
+> Task :app:compileDebugJavaWithJavac
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToJarDebug
+> Task :capacitor-android:bundleLibRuntimeToJarDebug
+> Task :app:compressDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:dexBuilderDebug
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :capacitor-android:processDebugJavaRes NO-SOURCE
+> Task :capacitor-cordova-android-plugins:processDebugJavaRes NO-SOURCE
+> Task :app:checkDebugDuplicateClasses
+> Task :capacitor-android:bundleLibRuntimeToDirDebug
+> Task :app:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToDirDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :capacitor-android:mergeDebugJniLibFolders
+> Task :capacitor-android:mergeDebugNativeLibs NO-SOURCE
+> Task :capacitor-android:copyDebugJniLibsProjectOnly
+> Task :capacitor-cordova-android-plugins:mergeDebugJniLibFolders
+> Task :capacitor-cordova-android-plugins:mergeDebugNativeLibs NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyDebugJniLibsProjectOnly
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :capacitor-android:checkDebugAarMetadata
+> Task :capacitor-android:stripDebugDebugSymbols NO-SOURCE
+> Task :capacitor-android:copyDebugJniLibsProjectAndLocalJars
+> Task :capacitor-android:extractDebugAnnotations
+> Task :capacitor-android:extractDeepLinksForAarDebug
+> Task :capacitor-android:mergeDebugGeneratedProguardFiles
+> Task :capacitor-android:mergeDebugConsumerProguardFiles
+> Task :capacitor-android:prepareDebugArtProfile
+> Task :capacitor-android:prepareLintJarForPublish
+> Task :capacitor-android:mergeDebugJavaResource
+> Task :capacitor-android:syncDebugLibJars
+> Task :capacitor-android:bundleDebugAar
+> Task :capacitor-android:assembleDebug
+> Task :capacitor-cordova-android-plugins:checkDebugAarMetadata
+> Task :capacitor-cordova-android-plugins:stripDebugDebugSymbols NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyDebugJniLibsProjectAndLocalJars
+> Task :capacitor-cordova-android-plugins:extractDebugAnnotations
+> Task :capacitor-cordova-android-plugins:extractDeepLinksForAarDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugGeneratedProguardFiles
+> Task :capacitor-cordova-android-plugins:mergeDebugConsumerProguardFiles
+> Task :capacitor-cordova-android-plugins:prepareDebugArtProfile
+> Task :capacitor-cordova-android-plugins:prepareLintJarForPublish
+> Task :capacitor-cordova-android-plugins:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:syncDebugLibJars
+> Task :capacitor-cordova-android-plugins:bundleDebugAar
+> Task :capacitor-cordova-android-plugins:assembleDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:mergeLibDexDebug
+> Task :app:mergeExtDexDebug
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+
+[Incubating] Problems report is available at: file:///home/runner/work/pajaku-demo/pajaku-demo/android-kulakan/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 27s
+93 actionable tasks: 93 executed
+=== Command Center Paja ===
+
+> pajaku@1.0.0 build
+> next build
+
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.ts took 27ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 771ms
+  Running TypeScript ...
+  Finished TypeScript in 2.1s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/79) ...
+  Generating static pages using 3 workers (19/79) 
+  Generating static pages using 3 workers (39/79) 
+  Generating static pages using 3 workers (59/79) 
+✓ Generating static pages using 3 workers (79/79) in 942ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /akun
+├ ○ /beranda
+├ ○ /bo/audit
+├ ○ /bo/crm
+├ ○ /bo/direktorat
+├ ○ /bo/dokumen
+├ ○ /bo/eis
+├ ○ /bo/migrasi
+├ ○ /bo/operasi
+├ ○ /bo/perkulakan
+├ ○ /bo/tagihan
+├ ○ /bo/toko
+├ ○ /bo/tpid
+├ ○ /cc/eis
+├ ○ /cc/gubernur
+├ ○ /cc/log
+├ ○ /cc/masuk
+├ ○ /cc/wall
+├ ○ /daftar
+├ ○ /direksi
+├ ○ /dokumen
+├ ○ /harga
+├ ○ /kadiv
+├ ○ /kepala
+├ ○ /keuangan
+├ ○ /koreksi
+├ ○ /kp/audit
+├ ○ /kp/beranda
+├ ○ /kp/crm
+├ ○ /kp/eis
+├ ○ /kp/gudang
+├ ○ /kp/katalog
+├ ○ /kp/keuangan
+├ ○ /kp/masuk
+├ ○ /kp/organisasi
+├ ○ /kp/patrol
+├ ○ /kp/pesanan
+├ ○ /kp/tagihan
+├ ○ /kp/tpid
+├ ○ /layanan
+├ ○ /m/audit
+├ ○ /m/crm
+├ ○ /m/dashboard
+├ ○ /m/eis
+├ ○ /m/eksisting
+├ ○ /m/hp-pedagang
+├ ○ /m/kredit
+├ ○ /m/masuk
+├ ○ /m/pengawas
+├ ○ /m/pesanan
+├ ○ /m/progres
+├ ○ /m/prospek
+├ ○ /m/tagihan
+├ ○ /m/tata-kelola
+├ ○ /m/unit
+├ ○ /manager
+├ ○ /manifest.webmanifest
+├ ○ /masuk
+├ ○ /migrasi
+├ ○ /pengajuan
+├ ○ /perpanjang
+├ ○ /persetujuan
+├ ○ /pesan
+├ ○ /petugas
+├ ○ /program
+├ ○ /registrasi-pengelola
+├ ○ /staf
+├ ○ /toko
+├ ○ /toko/aktivasi
+├ ○ /toko/kulakan
+├ ○ /toko/pelanggan
+├ ○ /toko/pesanan
+├ ○ /toko/produk
+├ ○ /tu
+└ ○ /verifikasi
+
+
+○  (Static)  prerendered as static content
+
+✔ Copying web assets from out to android-cc/app/src/main/assets/public in 71.05ms
+✔ Creating capacitor.config.json in android-cc/app/src/main/assets in 1.37ms
+✔ copy android in 85.42ms
+✔ Updating Android plugins in 2.50ms
+✔ update android in 21.57ms
+[info] Sync finished in 0.128s
+Updated 1 path from the index
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Configure project :capacitor-cordova-android-plugins
+WARNING: Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :capacitor-android:preBuild UP-TO-DATE
+> Task :capacitor-android:preDebugBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preBuild UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:preDebugBuild UP-TO-DATE
+> Task :app:javaPreCompileDebug
+> Task :capacitor-cordova-android-plugins:writeDebugAarMetadata
+> Task :capacitor-android:writeDebugAarMetadata
+> Task :capacitor-android:processDebugNavigationResources
+> Task :capacitor-cordova-android-plugins:processDebugNavigationResources
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :capacitor-android:generateDebugResValues
+> Task :app:compileDebugNavigationResources
+> Task :capacitor-android:generateDebugResources
+> Task :capacitor-android:packageDebugResources
+> Task :capacitor-cordova-android-plugins:generateDebugResValues
+> Task :capacitor-cordova-android-plugins:generateDebugResources
+> Task :capacitor-cordova-android-plugins:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :capacitor-android:extractDeepLinksDebug
+> Task :app:mergeDebugResources
+> Task :capacitor-cordova-android-plugins:extractDeepLinksDebug
+> Task :capacitor-android:compileDebugLibraryResources
+> Task :capacitor-cordova-android-plugins:processDebugManifest
+> Task :capacitor-android:processDebugManifest
+> Task :capacitor-cordova-android-plugins:compileDebugLibraryResources
+> Task :app:parseDebugLocalResources
+> Task :capacitor-android:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :capacitor-android:javaPreCompileDebug
+> Task :capacitor-cordova-android-plugins:javaPreCompileDebug
+> Task :capacitor-cordova-android-plugins:parseDebugLocalResources
+> Task :app:mergeDebugShaders
+> Task :capacitor-android:generateDebugRFile
+> Task :capacitor-cordova-android-plugins:generateDebugRFile
+
+> Task :capacitor-android:compileDebugJavaWithJavac
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :capacitor-cordova-android-plugins:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:bundleLibCompileToJarDebug
+> Task :capacitor-android:mergeDebugShaders
+> Task :capacitor-android:compileDebugShaders NO-SOURCE
+> Task :capacitor-android:generateDebugAssets UP-TO-DATE
+> Task :capacitor-android:bundleLibCompileToJarDebug
+> Task :capacitor-android:mergeDebugAssets
+> Task :capacitor-cordova-android-plugins:mergeDebugShaders
+> Task :capacitor-cordova-android-plugins:compileDebugShaders NO-SOURCE
+> Task :capacitor-cordova-android-plugins:generateDebugAssets UP-TO-DATE
+> Task :capacitor-cordova-android-plugins:mergeDebugAssets
+> Task :app:processDebugResources
+> Task :app:mergeDebugAssets
+> Task :app:compileDebugJavaWithJavac
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToJarDebug
+> Task :app:desugarDebugFileDependencies
+> Task :capacitor-android:bundleLibRuntimeToJarDebug
+> Task :app:compressDebugAssets
+> Task :app:dexBuilderDebug
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :capacitor-android:processDebugJavaRes NO-SOURCE
+> Task :capacitor-cordova-android-plugins:processDebugJavaRes NO-SOURCE
+> Task :app:checkDebugDuplicateClasses
+> Task :capacitor-android:bundleLibRuntimeToDirDebug
+> Task :app:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:bundleLibRuntimeToDirDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :capacitor-android:mergeDebugJniLibFolders
+> Task :capacitor-android:mergeDebugNativeLibs NO-SOURCE
+> Task :capacitor-android:copyDebugJniLibsProjectOnly
+> Task :capacitor-cordova-android-plugins:mergeDebugJniLibFolders
+> Task :capacitor-cordova-android-plugins:mergeDebugNativeLibs NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyDebugJniLibsProjectOnly
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :capacitor-android:checkDebugAarMetadata
+> Task :capacitor-android:stripDebugDebugSymbols NO-SOURCE
+> Task :capacitor-android:copyDebugJniLibsProjectAndLocalJars
+> Task :capacitor-android:extractDebugAnnotations
+> Task :capacitor-android:extractDeepLinksForAarDebug
+> Task :capacitor-android:mergeDebugGeneratedProguardFiles
+> Task :capacitor-android:mergeDebugConsumerProguardFiles
+> Task :capacitor-android:prepareDebugArtProfile
+> Task :capacitor-android:prepareLintJarForPublish
+> Task :capacitor-android:mergeDebugJavaResource
+> Task :capacitor-android:syncDebugLibJars
+> Task :capacitor-android:bundleDebugAar
+> Task :capacitor-android:assembleDebug
+> Task :capacitor-cordova-android-plugins:checkDebugAarMetadata
+> Task :capacitor-cordova-android-plugins:stripDebugDebugSymbols NO-SOURCE
+> Task :capacitor-cordova-android-plugins:copyDebugJniLibsProjectAndLocalJars
+> Task :capacitor-cordova-android-plugins:extractDebugAnnotations
+> Task :capacitor-cordova-android-plugins:extractDeepLinksForAarDebug
+> Task :capacitor-cordova-android-plugins:mergeDebugGeneratedProguardFiles
+> Task :capacitor-cordova-android-plugins:mergeDebugConsumerProguardFiles
+> Task :capacitor-cordova-android-plugins:prepareDebugArtProfile
+> Task :capacitor-cordova-android-plugins:prepareLintJarForPublish
+> Task :capacitor-cordova-android-plugins:mergeDebugJavaResource
+> Task :capacitor-cordova-android-plugins:syncDebugLibJars
+> Task :capacitor-cordova-android-plugins:bundleDebugAar
+> Task :capacitor-cordova-android-plugins:assembleDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:mergeLibDexDebug
+> Task :app:mergeExtDexDebug
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+
+[Incubating] Problems report is available at: file:///home/runner/work/pajaku-demo/pajaku-demo/android-cc/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 25s
+93 actionable tasks: 93 executed
